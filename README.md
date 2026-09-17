@@ -8,8 +8,9 @@ Protótipo institucional em HTML + CSS + JavaScript, baseado na identidade visua
 - script.js — menu mobile, formulário demonstrativo e botão voltar ao topo
 - assets/identidade-top-english.png — recorte da identidade visual da planilha
 
-## Como executar
-Abra o arquivo `index.html` em um navegador.
+## Como entrar no site
+Veja nossa publicação no GithubPages
+- pedronapp.github.io/TheTopInglesh
 
 ## O que o prototipo demonstra
 - Apresentação institucional da escola
@@ -22,4 +23,4 @@ Abra o arquivo `index.html` em um navegador.
 
 Observação: o formulário é demonstrativo. Ele não envia dados para um banco ou WhatsApp real.
 
-pedronapp.github.io/TheTopInglesh
+
