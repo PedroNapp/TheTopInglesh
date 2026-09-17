@@ -11,7 +11,7 @@ Protótipo institucional em HTML + CSS + JavaScript, baseado na identidade visua
 ## Como executar
 Abra o arquivo `index.html` em um navegador.
 
-## O que o protótipo demonstra
+## O que o prototipo demonstra
 - Apresentação institucional da escola
 - Metodologia e modalidades
 - Página/seção de captação de interessados
