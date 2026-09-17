@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Top English | Painel Administrativo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loginView" class="login-view">
+    <div class="login-card">
+      <div class="brand-mini">
+        <span class="brand-mark">T</span>
+        <div><strong>THE TOP ENGLISH</strong><small>Painel Administrativo</small></div>
+      </div>
+
+      <h1>Acesso administrativo</h1>
+      <p class="muted">Entre com a conta da escola para editar as informações do site.</p>
+
+      <form id="loginForm">
+        <label for="username">Usuário</label>
+        <input id="username" type="text" autocomplete="username" placeholder="Digite o usuário" required>
+
+        <label for="password">Senha</label>
+        <input id="password" type="password" autocomplete="current-password" placeholder="Digite a senha" required>
+
+        <button class="btn btn-primary" type="submit">Entrar</button>
+        <p id="loginError" class="error"></p>
+      </form>
+
+      <div class="prototype-note">
+        <strong>Protótipo:</strong> a autenticação desta versão é demonstrativa e usa credenciais no JavaScript.
+      </div>
+    </div>
+  </div>
+
+  <div id="adminView" class="admin-view hidden">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-mark">T</span>
+        <div><strong>THE TOP ENGLISH</strong><small>Admin</small></div>
+      </div>
+
+      <nav>
+        <button class="side-link active" data-section="inicio">🏠 Página inicial</button>
+        <button class="side-link" data-section="escola">🏫 A escola</button>
+        <button class="side-link" data-section="metodologia">📚 Metodologia</button>
+        <button class="side-link" data-section="modalidades">👥 Modalidades</button>
+        <button class="side-link" data-section="contato">📱 Contato</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <a href="../index.html" target="_blank" class="site-link">↗ Ver site</a>
+        <button id="logoutBtn" class="logout">Sair</button>
+      </div>
+    </aside>
+
+    <main class="dashboard">
+      <header class="dashboard-header">
+        <div>
+          <span class="section-label">PAINEL ADMINISTRATIVO</span>
+          <h1>Gerenciar conteúdo</h1>
+          <p>Altere as informações e salve para atualizar o conteúdo do site.</p>
+        </div>
+        <span id="saveStatus" class="save-status">Tudo salvo</span>
+      </header>
+
+      <section id="section-inicio" class="admin-section active-section">
+        <div class="section-title"><h2>Página inicial</h2><p>Informações apresentadas no destaque principal.</p></div>
+        <div class="form-card">
+          <label for="heroTitle">Título principal</label>
+          <textarea id="heroTitle" rows="2"></textarea>
+
+          <label for="heroDescription">Descrição</label>
+          <textarea id="heroDescription" rows="4"></textarea>
+
+          <label for="heroButton">Texto do botão</label>
+          <input id="heroButton" type="text">
+
+          <button class="btn btn-primary save-section" data-save="inicio">Salvar página inicial</button>
+        </div>
+      </section>
+
+      <section id="section-escola" class="admin-section">
+        <div class="section-title"><h2>A escola</h2><p>Apresentação institucional da The Top English.</p></div>
+        <div class="form-card">
+          <label for="schoolTitle">Título</label>
+          <input id="schoolTitle" type="text">
+
+          <label for="schoolText1">Primeiro parágrafo</label>
+          <textarea id="schoolText1" rows="4"></textarea>
+
+          <label for="schoolText2">Segundo parágrafo</label>
+          <textarea id="schoolText2" rows="4"></textarea>
+
+          <label for="schoolCardTitle">Título do destaque</label>
+          <input id="schoolCardTitle" type="text">
+
+          <label for="schoolCardText">Texto do destaque</label>
+          <textarea id="schoolCardText" rows="3"></textarea>
+
+          <button class="btn btn-primary save-section" data-save="escola">Salvar informações</button>
+        </div>
+      </section>
+
+      <section id="section-metodologia" class="admin-section">
+        <div class="section-title"><h2>Metodologia</h2><p>Edite o texto e os três destaques da seção.</p></div>
+        <div class="form-card">
+          <label for="methodTitle">Título</label>
+          <input id="methodTitle" type="text">
+
+          <label for="methodDescription">Descrição</label>
+          <textarea id="methodDescription" rows="3"></textarea>
+
+          <div class="divider"></div>
+
+          <div class="two-form">
+            <div><label for="method1Title">Destaque 1</label><input id="method1Title" type="text"></div>
+            <div><label for="method1Text">Texto 1</label><textarea id="method1Text" rows="3"></textarea></div>
+            <div><label for="method2Title">Destaque 2</label><input id="method2Title" type="text"></div>
+            <div><label for="method2Text">Texto 2</label><textarea id="method2Text" rows="3"></textarea></div>
+            <div><label for="method3Title">Destaque 3</label><input id="method3Title" type="text"></div>
+            <div><label for="method3Text">Texto 3</label><textarea id="method3Text" rows="3"></textarea></div>
+          </div>
+
+          <button class="btn btn-primary save-section" data-save="metodologia">Salvar metodologia</button>
+        </div>
+      </section>
+
+      <section id="section-modalidades" class="admin-section">
+        <div class="section-title"><h2>Modalidades</h2><p>Edite os nomes e descrições das opções de aula.</p></div>
+        <div class="form-card">
+          <div class="edit-item"><span>01</span><div><label for="mod1Title">Nome</label><input id="mod1Title" type="text"><label for="mod1Text">Descrição</label><textarea id="mod1Text" rows="2"></textarea></div></div>
+          <div class="edit-item"><span>02</span><div><label for="mod2Title">Nome</label><input id="mod2Title" type="text"><label for="mod2Text">Descrição</label><textarea id="mod2Text" rows="2"></textarea></div></div>
+          <div class="edit-item"><span>03</span><div><label for="mod3Title">Nome</label><input id="mod3Title" type="text"><label for="mod3Text">Descrição</label><textarea id="mod3Text" rows="2"></textarea></div></div>
+          <button class="btn btn-primary save-section" data-save="modalidades">Salvar modalidades</button>
+        </div>
+      </section>
+
+      <section id="section-contato" class="admin-section">
+        <div class="section-title"><h2>Contato</h2><p>Dados exibidos na área de contato do site.</p></div>
+        <div class="form-card">
+          <label for="address">Endereço</label>
+          <input id="address" type="text">
+
+          <label for="phone">Telefone</label>
+          <input id="phone" type="text">
+
+          <label for="whatsapp">WhatsApp</label>
+          <input id="whatsapp" type="text">
+
+          <button class="btn btn-primary save-section" data-save="contato">Salvar contato</button>
+
+          <div class="danger-zone">
+            <div><strong>Restaurar conteúdo padrão</strong><p>Apaga as alterações salvas neste navegador e volta ao conteúdo inicial.</p></div>
+            <button id="resetBtn" class="btn btn-danger">Restaurar padrão</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
