@@ -1,0 +1,51 @@
+
+-- 1. Criar tabela de conteúdo
+create table public.site_conteudo (
+    id uuid primary key default gen_random_uuid(),
+    secao text not null,
+    elemento text not null,
+    conteudo text not null default '',
+    atualizado_em timestamptz not null default now(),
+    atualizado_por uuid references auth.users(id)
+);
+
+-- 2. Ativar segurança por linha
+alter table public.site_conteudo
+enable row level security;
+
+-- 3. Permitir leitura pública
+create policy "Publico pode visualizar conteudo"
+on public.site_conteudo
+for select
+to anon, authenticated
+using (true);
+
+-- 4. Permitir inserção somente ao administrador
+create policy "Admin pode inserir conteudo"
+on public.site_conteudo
+for insert
+to authenticated
+with check (
+    (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin'
+);
+
+-- 5. Permitir edição somente ao administrador
+create policy "Admin pode editar conteudo"
+on public.site_conteudo
+for update
+to authenticated
+using (
+    (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin'
+)
+with check (
+    (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin'
+);
+
+-- 6. Permitir exclusão somente ao administrador
+create policy "Admin pode excluir conteudo"
+on public.site_conteudo
+for delete
+to authenticated
+using (
+    (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin'
+);
