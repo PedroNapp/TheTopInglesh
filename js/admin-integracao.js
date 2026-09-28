@@ -1,257 +1,102 @@
 import { supabase } from "./supabase.js";
 
-const TOP_ENGLISH_DEFAULTS = {
-  heroTitle: "Seu inglês pode ir mais longe.",
-  heroDescription:
-    "Conheça a The Top English, sua escola de inglês em Palmas, e encontre uma forma de estudo que combine com sua rotina.",
-  heroButton: "Quero estudar",
+async function carregarConteudo() {
+  const { data, error } = await supabase
+    .from("site_conteudo")
+    .select("elemento, conteudo");
 
-  schoolTitle: "Conheça a The Top English",
-  schoolText1:
-    "A The Top English é uma escola de idiomas voltada ao ensino de inglês. Aqui, o visitante encontra informações sobre a escola, sua metodologia, modalidades de aula e formas de contato.",
-  schoolText2:
-    "O site foi pensado para facilitar o primeiro contato de pessoas interessadas em estudar e deixar as principais informações disponíveis em um único lugar.",
-  schoolCardTitle: "Inglês para diferentes objetivos",
-  schoolCardText:
-    "Conheça as opções de aulas e converse com a escola para verificar a modalidade e a disponibilidade mais adequada.",
-
-  methodTitle: "Aprender inglês de forma organizada",
-  methodDescription:
-    "Consulte as informações da escola e entre em contato para conhecer melhor a proposta das aulas.",
-
-  method1Title: "Metodologia",
-  method1Text:
-    "Informações sobre a proposta de ensino e o funcionamento das aulas.",
-
-  method2Title: "Aulas individuais",
-  method2Text:
-    "Uma opção para quem busca um atendimento mais individualizado.",
-
-  method3Title: "Aulas em grupo",
-  method3Text:
-    "Turmas organizadas conforme disponibilidade e formação dos grupos.",
-
-  mod1Title: "Individual",
-  mod1Text:
-    "Atendimento individual, com horário definido conforme disponibilidade.",
-
-  mod2Title: "Em grupo",
-  mod2Text:
-    "Turmas com organização de horários e disponibilidade de vagas.",
-
-  mod3Title: "Consulte a escola",
-  mod3Text:
-    "Envie seus dados e informe seus horários para verificar as opções disponíveis.",
-
-  address: "406 Norte, Av. LO 14, Lote 10 — Palmas - TO",
-  phone: "(63) 3215-1652",
-  whatsapp: "(63) 3215-1652",
-};
-
-
-// Busca os dados no Supabase
-async function loadTopEnglishData() {
-  try {
-    const { data, error } = await supabase
-      .from("site_conteudo")
-      .select("elemento, conteudo");
-
-    if (error) {
-      console.error("Erro ao carregar conteúdo:", error);
-      return { ...TOP_ENGLISH_DEFAULTS };
-    }
-
-    const dadosDoBanco = {};
-
-    data.forEach((item) => {
-      dadosDoBanco[item.elemento] = item.conteudo;
-    });
-
-    return {
-      ...TOP_ENGLISH_DEFAULTS,
-      ...dadosDoBanco,
-    };
-
-  } catch (error) {
-    console.error("Erro ao conectar com o Supabase:", error);
-
-    return {
-      ...TOP_ENGLISH_DEFAULTS,
-    };
+  if (error) {
+    console.error("Erro ao carregar conteúdo:", error);
+    return;
   }
+
+  const conteudo = {};
+
+  data.forEach((item) => {
+    conteudo[item.elemento] = item.conteudo;
+  });
+
+  aplicarConteudo(conteudo);
 }
 
+function aplicarConteudo(d) {
+  // Página inicial
+  document.querySelector(".hero h1").innerHTML =
+    `${d.heroTitle} `.replace(/(\S+)\s*$/, "<strong>$1</strong>");
 
-function setText(selector, value) {
-  const el = document.querySelector(selector);
+  document.querySelector(".hero p").textContent =
+    d.heroDescription;
 
-  if (el && value) {
-    el.textContent = value;
-  }
-}
-
-
-async function applyTopEnglishAdminData() {
-
-  const d = await loadTopEnglishData();
-
-  // =========================
-  // PÁGINA INICIAL
-  // =========================
-
-  const hero = document.querySelector(".hero h1");
-
-  if (hero) {
-    const parts = d.heroTitle.split(" ");
-    const last = parts.pop();
-
-    hero.innerHTML = `${parts.join(" ")} <strong>${last}</strong>`;
-  }
-
-  setText(".hero p", d.heroDescription);
-  setText(".hero-actions .btn-primary", d.heroButton);
+  document.querySelector(".hero-actions .btn-primary").textContent =
+    d.heroButton;
 
 
-  // =========================
-  // A ESCOLA
-  // =========================
+  // A escola
+  document.querySelector("#sobre h2").textContent =
+    d.schoolTitle;
 
-  setText("#sobre h2", d.schoolTitle);
+  document.querySelector(
+    "#sobre .two-columns > div:first-child p:nth-of-type(1)"
+  ).textContent = d.schoolText1;
 
-  setText(
-    "#sobre .two-columns > div:first-child p:nth-of-type(1)",
-    d.schoolText1
-  );
+  document.querySelector(
+    "#sobre .two-columns > div:first-child p:nth-of-type(2)"
+  ).textContent = d.schoolText2;
 
-  setText(
-    "#sobre .two-columns > div:first-child p:nth-of-type(2)",
-    d.schoolText2
-  );
+  document.querySelector(".info-card h3").textContent =
+    d.schoolCardTitle;
 
-  setText(".info-card h3", d.schoolCardTitle);
-  setText(".info-card p", d.schoolCardText);
+  document.querySelector(".info-card p").textContent =
+    d.schoolCardText;
 
 
-  // =========================
-  // METODOLOGIA
-  // =========================
+  // Metodologia
+  document.querySelector("#metodologia h2").textContent =
+    d.methodTitle;
 
-  setText("#metodologia h2", d.methodTitle);
+  document.querySelector("#metodologia .section-heading > p").textContent =
+    d.methodDescription;
 
-  setText(
-    "#metodologia .section-heading > p",
-    d.methodDescription
-  );
+  const cards = document.querySelectorAll(".feature-card");
 
-  const features = document.querySelectorAll(".feature-card");
-
-  const methods = [
+  const metodos = [
     [d.method1Title, d.method1Text],
     [d.method2Title, d.method2Text],
-    [d.method3Title, d.method3Text],
+    [d.method3Title, d.method3Text]
   ];
 
-  features.forEach((card, i) => {
-
-    if (!methods[i]) return;
-
-    const title = card.querySelector("h3");
-    const text = card.querySelector("p");
-
-    if (title) {
-      title.textContent = methods[i][0];
-    }
-
-    if (text) {
-      text.textContent = methods[i][1];
-    }
-
+  cards.forEach((card, i) => {
+    card.querySelector("h3").textContent = metodos[i][0];
+    card.querySelector("p").textContent = metodos[i][1];
   });
 
 
-  // =========================
-  // MODALIDADES
-  // =========================
-
-  const modalities = document.querySelectorAll(".modality");
+  // Modalidades
+  const modalidades = document.querySelectorAll(".modality");
 
   const mods = [
     [d.mod1Title, d.mod1Text],
     [d.mod2Title, d.mod2Text],
-    [d.mod3Title, d.mod3Text],
+    [d.mod3Title, d.mod3Text]
   ];
 
-  modalities.forEach((item, i) => {
-
-    if (!mods[i]) return;
-
-    const title = item.querySelector("h3");
-    const text = item.querySelector("p");
-
-    if (title) {
-      title.textContent = mods[i][0];
-    }
-
-    if (text) {
-      text.textContent = mods[i][1];
-    }
-
+  modalidades.forEach((item, i) => {
+    item.querySelector("h3").textContent = mods[i][0];
+    item.querySelector("p").textContent = mods[i][1];
   });
 
 
-  // =========================
-  // CONTATO
-  // =========================
+  // Contato
+  const contatos = document.querySelectorAll(".contact-card");
 
-  const contactCards = document.querySelectorAll(".contact-card");
+  contatos[0].querySelector("p").innerHTML =
+    d.address.replace(" — ", "<br>");
 
-  if (contactCards[0]) {
+  contatos[1].querySelector("p").textContent =
+    d.phone;
 
-    const p = contactCards[0].querySelector("p");
-
-    if (p) {
-      p.innerHTML = d.address.replace(" — ", "<br>");
-    }
-
-  }
-
-
-  if (contactCards[1]) {
-
-    const p = contactCards[1].querySelector("p");
-
-    if (p) {
-      p.textContent = d.phone;
-    }
-
-  }
-
-
-  if (contactCards[2]) {
-
-    const p = contactCards[2].querySelector("p");
-
-    if (p) {
-      p.textContent = "Entre em contato para saber mais.";
-    }
-
-    const link = contactCards[2].querySelector("a");
-
-    if (link) {
-
-      const digits = d.whatsapp.replace(/\D/g, "");
-
-      link.href = `https://wa.me/55${digits}`;
-
-    }
-
-  }
-
+  contatos[2].querySelector("a").href =
+    `https://wa.me/55${d.whatsapp.replace(/\D/g, "")}`;
 }
 
-
-// Executa quando a página carregar
-document.addEventListener(
-  "DOMContentLoaded",
-  applyTopEnglishAdminData
-);
+carregarConteudo();
