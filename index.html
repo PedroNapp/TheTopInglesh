@@ -1,269 +1,1224 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Protótipo institucional da The Top English">
-  <title>The Top English | Curso de Idiomas</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="header">
-    <div class="container nav">
-      <a href="#inicio" class="brand" aria-label="The Top English - início">
-        <img src="assets/identidade-top-english.png" alt="The Top English - Curso de Idiomas">
-      </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The Top English — escola de inglês em Palmas, com experiência desde 1997. Cursos para diferentes níveis, idades e objetivos."
+    />
+    <title>The Top English | Inglês desde 1997</title>
 
-      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
 
-      <nav class="menu" aria-label="Navegação principal">
-        <a href="#inicio">Início</a>
-        <a href="#sobre">A escola</a>
-        <a href="#metodologia">Metodologia</a>
-        <a href="#modalidades">Modalidades</a>
-        <a href="#interesse" class="menu-highlight">Quero estudar</a>
-        <a href="#contato">Contato</a>
-      </nav>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+       AVISO
+  ========================== -->
+    <div
+      class="notice"
+      data-confirmar="Confirmar com a escola que há poucas vagas neste semestre"
+    >
+      <p class="container notice-inner">
+        <strong>Novas turmas e horários:</strong>
+        consulte a disponibilidade para este semestre.
+        <a href="#interesse">Ver opções de horário →</a>
+      </p>
     </div>
-  </header>
 
-  <main>
-    <section id="inicio" class="hero">
-      <div class="hero-flags hero-flags-left" aria-hidden="true">🇬🇧</div>
-      <div class="hero-flags hero-flags-right" aria-hidden="true">🇺🇸</div>
+    <!-- =========================
+       HEADER
+  ========================== -->
+    <header class="header">
+      <div class="container nav">
+        <a href="#inicio" class="brand" aria-label="The Top English - início">
+          <img
+            src="assets/identidade-top-english.png"
+            alt="The Top English - Curso de Idiomas"
+          />
+        </a>
 
-      <div class="container hero-content">
-        <div class="hero-text">
-          <span class="eyebrow">CURSO DE IDIOMAS</span>
-          <h1>Seu inglês pode ir<br><strong>mais longe.</strong></h1>
-          <p>
-            Conheça a The Top English, sua escola de inglês em Palmas,
-            e encontre uma forma de estudo que combine com sua rotina.
-          </p>
-          <div class="hero-actions">
-            <a href="#interesse" class="btn btn-primary">Quero estudar</a>
-            <a href="#sobre" class="btn btn-outline">Conhecer a escola</a>
-          </div>
-        </div>
+        <button
+          class="menu-toggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
 
-        <div class="hero-orbit" aria-hidden="true">
-          <div class="globe">🌎</div>
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
-        </div>
+        <nav class="menu" aria-label="Navegação principal">
+          <a href="#inicio">Início</a>
+
+          <a href="#sobre">A escola</a>
+
+          <a href="#metodologia">Metodologia</a>
+
+          <a href="#modalidades">Cursos</a>
+
+          <a href="#como-funciona">Como funciona</a>
+
+          <a href="#duvidas">Dúvidas</a>
+
+          <a href="#interesse" class="menu-highlight"> Quero estudar </a>
+
+          <a href="#contato">Contato</a>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <section id="sobre" class="section">
-      <div class="container two-columns">
-        <div>
-          <span class="section-label">A ESCOLA</span>
-          <h2>Conheça a <span>The Top English</span></h2>
-          <p>
-            A The Top English é uma escola de idiomas voltada ao ensino de inglês.
-            Aqui, o visitante encontra informações sobre a escola, sua metodologia,
-            modalidades de aula e formas de contato.
-          </p>
-          <p>
-            O site foi pensado para facilitar o primeiro contato de pessoas
-            interessadas em estudar e deixar as principais informações disponíveis
-            em um único lugar.
-          </p>
-        </div>
+    <main>
+      <!-- =========================
+         HERO
+    ========================== -->
+      <section id="inicio" class="hero">
+        <div class="hero-decoration hero-decoration-one"></div>
+        <div class="hero-decoration hero-decoration-two"></div>
 
-        <div class="info-card">
-          <div class="card-icon">🌎</div>
-          <h3>Inglês para diferentes objetivos</h3>
-          <p>
-            Conheça as opções de aulas e converse com a escola para verificar
-            a modalidade e a disponibilidade mais adequada.
-          </p>
-        </div>
-      </div>
-    </section>
+        <div class="container hero-content">
+          <div class="hero-text">
+            <span class="eyebrow"> INGLÊS EM PALMAS · DESDE 1997 </span>
 
-    <section id="metodologia" class="section section-light">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">METODOLOGIA</span>
-          <h2>Aprender inglês de forma <span>organizada</span></h2>
-          <p>
-            Consulte as informações da escola e entre em contato para conhecer
-            melhor a proposta das aulas.
-          </p>
-        </div>
+            <h1>
+              Inglês com
+              <strong>experiência.</strong>
+            </h1>
 
-        <div class="cards-grid">
-          <article class="feature-card">
-            <div class="feature-icon">📚</div>
-            <h3>Metodologia</h3>
-            <p>Informações sobre a proposta de ensino e o funcionamento das aulas.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-icon">👤</div>
-            <h3>Aulas individuais</h3>
-            <p>Uma opção para quem busca um atendimento mais individualizado.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-icon">👥</div>
-            <h3>Aulas em grupo</h3>
-            <p>Turmas organizadas conforme disponibilidade e formação dos grupos.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="modalidades" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">MODALIDADES</span>
-          <h2>Encontre uma opção para sua <span>rotina</span></h2>
-        </div>
-
-        <div class="modalities">
-          <article class="modality">
-            <div class="modality-number">01</div>
-            <div>
-              <h3>Individual</h3>
-              <p>Atendimento individual, com horário definido conforme disponibilidade.</p>
-            </div>
-          </article>
-
-          <article class="modality">
-            <div class="modality-number">02</div>
-            <div>
-              <h3>Em grupo</h3>
-              <p>Turmas com organização de horários e disponibilidade de vagas.</p>
-            </div>
-          </article>
-
-          <article class="modality">
-            <div class="modality-number">03</div>
-            <div>
-              <h3>Consulte a escola</h3>
-              <p>Envie seus dados e informe seus horários para verificar as opções disponíveis.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="interesse" class="section interest-section">
-      <div class="container interest-grid">
-        <div class="interest-copy">
-          <span class="section-label">QUERO ESTUDAR</span>
-          <h2>Vamos conversar sobre seu <span>inglês?</span></h2>
-          <p>
-            Preencha o formulário para demonstrar interesse. A escola poderá
-            entrar em contato para conhecer seu perfil e verificar horários
-            e modalidades disponíveis.
-          </p>
-
-          <div class="process">
-            <div><b>01</b><span>Você envia seus dados</span></div>
-            <div><b>02</b><span>A escola recebe o interesse</span></div>
-            <div><b>03</b><span>Vocês conversam sobre as opções</span></div>
-          </div>
-        </div>
-
-        <form id="interestForm" class="interest-form">
-          <h3>Tenho interesse em estudar</h3>
-
-          <label for="name">Nome *</label>
-          <input id="name" name="name" type="text" placeholder="Seu nome" required>
-
-          <label for="whatsapp">WhatsApp *</label>
-          <input id="whatsapp" name="whatsapp" type="tel" placeholder="(63) 99999-9999" required>
-
-          <label for="interest">Interesse</label>
-          <select id="interest" name="interest">
-            <option value="">Selecione</option>
-            <option>Inglês</option>
-            <option>Quero saber mais sobre as aulas</option>
-            <option>Quero conhecer as modalidades</option>
-          </select>
-
-          <label for="modality">Modalidade de preferência</label>
-          <select id="modality" name="modality">
-            <option value="">Selecione</option>
-            <option>Individual</option>
-            <option>Em grupo</option>
-            <option>Ainda não sei</option>
-          </select>
-
-          <label for="availability">Dias e horários disponíveis</label>
-          <input id="availability" name="availability" type="text" placeholder="Ex.: segunda à noite">
-
-          <button class="btn btn-primary btn-full" type="submit">Enviar interesse</button>
-          <p class="form-note">* Protótipo: o envio apenas demonstra o fluxo da captação.</p>
-          <div id="formMessage" class="form-message" role="status"></div>
-        </form>
-      </div>
-    </section>
-
-    <section id="contato" class="section contact-section">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">CONTATO</span>
-          <h2>Fale com a <span>The Top English</span></h2>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-card">
-            <span class="contact-icon">📍</span>
-            <div>
-              <h3>Endereço</h3>
-              <p>406 Norte, Av. LO 14, Lote 10<br>Palmas - TO</p>
-            </div>
-          </div>
-
-          <div class="contact-card">
-            <span class="contact-icon">📱</span>
-            <div>
-              <h3>Telefone</h3>
-              <p>(63) 3215-1652</p>
-            </div>
-          </div>
-
-          <div class="contact-card">
-            <span class="contact-icon">💬</span>
-            <div>
-              <h3>WhatsApp</h3>
-              <p>Entre em contato para saber mais.</p>
-              <a href="https://wa.me/556332151652" target="_blank" rel="noopener">Abrir WhatsApp →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="google-flow">
-          <div class="google-flow-icon">G</div>
-          <div>
-            <strong>Encontre a The Top English no Google</strong>
             <p>
-              O Perfil da Empresa no Google pode funcionar como porta de entrada
-              para o site e para os canais de contato.
+              Há mais de duas décadas ensinando inglês, a The Top English
+              oferece aulas para diferentes níveis, idades e objetivos, com
+              acompanhamento próximo da teacher.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#interesse" class="btn btn-primary"> Quero estudar </a>
+
+              <a href="#sobre" class="btn btn-outline"> Conhecer a escola </a>
+            </div>
+
+            <div class="hero-trust">
+              <div>
+                <strong>1997</strong>
+                <span>Início da trajetória</span>
+              </div>
+
+              <div>
+                <strong>27+</strong>
+                <span>anos de experiência</span>
+              </div>
+
+              <div>
+                <strong>Cambridge</strong>
+                <span>material e plataforma</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-orbit" aria-hidden="true">
+              <!-- Órbitas -->
+              <div class="orbit orbit-1"></div>
+              <div class="orbit orbit-2"></div>
+              <div class="orbit orbit-3"></div>
+
+              <!-- Globo -->
+              <div class="globe-image">
+                <img
+                  src="assets/globo.png"
+                  alt="Globo terrestre"
+                  class="globo"
+                />
+              </div>
+
+              <!-- Bandeira dos Estados Unidos -->
+              <div class="language-orbit language-orbit-us">
+                <div class="language-flag flag-us" aria-label="Estados Unidos">
+                  <span class="us-canton"></span>
+                  <span class="us-stripes"></span>
+                </div>
+              </div>
+
+              <!-- Bandeira da Inglaterra -->
+              <div class="language-orbit language-orbit-uk">
+                <div class="language-flag flag-uk" aria-label="Reino Unido">
+                  <span class="uk-cross"></span>
+                </div>
+              </div>
+
+              <!-- Pontos decorativos -->
+              <span class="orbit-dot orbit-dot-1"></span>
+              <span class="orbit-dot orbit-dot-2"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         SOBRE
+    ========================== -->
+      <section id="sobre" class="section">
+        <div class="container two-columns">
+          <div>
+            <span class="section-label"> A ESCOLA </span>
+
+            <h2>
+              Uma escola construída ao longo de
+              <span>anos de experiência.</span>
+            </h2>
+
+            <p>
+              A The Top English é uma escola de inglês em Palmas que atua desde
+              1997. Ao longo dessa trajetória, o ensino foi construído com
+              acompanhamento próximo dos alunos e atenção às necessidades de
+              cada turma.
+            </p>
+
+            <p>
+              Aqui, o aluno pode conhecer as opções de cursos, informar seus
+              objetivos e horários e conversar diretamente com a escola para
+              encontrar a alternativa mais adequada.
+            </p>
+
+            <a href="#professora" class="text-link">
+              Conheça a teacher Maureen →
+            </a>
+          </div>
+
+          <div class="school-highlight">
+            <div class="highlight-main">
+              <span id="galleryTitle" class="highlight-number">
+                Fachada da escola
+              </span>
+
+              <p id="galleryDescription">
+                Conheça um pouco do espaço e da experiência da The Top English.
+              </p>
+            </div>
+
+            <div class="highlight-items">
+              <div class="school-gallery-wrapper">
+                <button
+                  class="gallery-btn gallery-prev"
+                  type="button"
+                  aria-label="Imagem anterior"
+                >
+                  <span>‹</span>
+                </button>
+
+                <div class="school-gallery">
+                  <img
+                    id="galleryImage"
+                    class="galleryImage"
+                    src="assets/escola-1.jpg"
+                    alt="Espaço da The Top English"
+                  />
+                </div>
+
+                <button
+                  class="gallery-btn gallery-next"
+                  type="button"
+                  aria-label="Próxima imagem"
+                >
+                  <span>›</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         METODOLOGIA
+    ========================== -->
+      <section id="metodologia" class="section section-light">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label"> METODOLOGIA </span>
+
+            <h2>
+              Aprender inglês com
+              <span>acompanhamento.</span>
+            </h2>
+
+            <p>
+              A proposta da The Top English combina material didático, prática e
+              acompanhamento próximo, respeitando o nível e os objetivos de cada
+              aluno.
             </p>
           </div>
-          <span class="flow-arrow">Google → Site → Contato</span>
+
+          <div class="cards-grid">
+            <article class="feature-card">
+              <span class="feature-number"> 01 </span>
+
+              <div class="feature-icon">📚</div>
+
+              <h3>Material Cambridge</h3>
+
+              <p>
+                As aulas utilizam livros da Cambridge University Press e acesso
+                à plataforma Cambridge One.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-number"> 02 </span>
+
+              <div class="feature-icon">🎯</div>
+
+              <h3>Acompanhamento próximo</h3>
+
+              <p>
+                A teacher acompanha o aluno e orienta sobre nível, curso e
+                organização das aulas.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-number"> 03 </span>
+
+              <div class="feature-icon">👥</div>
+
+              <h3>Diferentes formatos</h3>
+
+              <p>
+                Há opções de aulas individuais e em grupo, conforme curso e
+                disponibilidade.
+              </p>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer class="footer">
-    <div class="container footer-content">
-      <div>
-        <strong>THE TOP ENGLISH</strong>
-        <span>Curso de Idiomas</span>
-      </div>
-      <p>Protótipo inicial — Projeto Integrador I em TI</p>
-    </div>
-  </footer>
+      <!-- =========================
+         MODALIDADES / CURSOS
+    ========================== -->
+      <section id="modalidades" class="section">
+        <div class="container">
+          <div id="cursosConteudo">
+            <div class="section-heading">
+              <span class="section-label"> CURSOS E MODALIDADES </span>
 
-  <button id="backTop" class="back-top" aria-label="Voltar ao topo">↑</button>
-  <script src="script.js"></script>
-  <script type="module" src="./js/admin-integracao.js"></script>
-</body>
+              <h2>
+                Inglês para diferentes
+                <span>objetivos.</span>
+              </h2>
+
+              <p>
+                Conheça algumas das opções oferecidas pela The Top English e
+                consulte a escola sobre disponibilidade de turmas e horários.
+              </p>
+            </div>
+
+            <div class="course-grid">
+              <article class="course-card">
+                <div class="course-top">
+                  <span class="course-tag"> REGULAR </span>
+
+                  <span class="course-number"> 01 </span>
+                </div>
+
+                <h3>Curso Regular</h3>
+
+                <p>
+                  Do nível iniciante ao avançado, com turmas organizadas de
+                  acordo com o nível dos alunos.
+                </p>
+
+                <a href="#interesse"> Consultar turma → </a>
+              </article>
+
+              <article class="course-card">
+                <div class="course-top">
+                  <span class="course-tag"> INFANTIL </span>
+
+                  <span class="course-number"> 02 </span>
+                </div>
+
+                <h3>Inglês Infantil</h3>
+
+                <p>
+                  Turmas organizadas por idade e disponibilidade, pensadas para
+                  o aprendizado das crianças.
+                </p>
+
+                <a href="#interesse"> Consultar turma → </a>
+              </article>
+
+              <article class="course-card">
+                <div class="course-top">
+                  <span class="course-tag"> INDIVIDUAL </span>
+
+                  <span class="course-number"> 03 </span>
+                </div>
+
+                <h3>Aulas Individuais</h3>
+
+                <p>
+                  Atendimento individual para quem procura maior flexibilidade
+                  de horário.
+                </p>
+
+                <a href="#interesse"> Consultar disponibilidade → </a>
+              </article>
+
+              <article class="course-card">
+                <div class="course-top">
+                  <span class="course-tag"> PREPARATÓRIO </span>
+
+                  <span class="course-number"> 04 </span>
+                </div>
+
+                <h3>IELTS e TOEFL</h3>
+
+                <p>
+                  Opções de preparação para exames de proficiência, conforme
+                  disponibilidade da escola.
+                </p>
+
+                <a href="#interesse"> Saber mais → </a>
+              </article>
+
+              <article class="course-card">
+                <div class="course-top">
+                  <span class="course-tag"> APOIO </span>
+
+                  <span class="course-number"> 05 </span>
+                </div>
+
+                <h3>Aula de reforço</h3>
+
+                <p>
+                  Para quem precisa reforçar conteúdos ou complementar os
+                  estudos.
+                </p>
+
+                <a href="#interesse"> Consultar → </a>
+              </article>
+
+              <article class="course-card">
+                <div class="course-top">
+                  <span class="course-tag"> PASSAGES </span>
+
+                  <span class="course-number"> 06 </span>
+                </div>
+
+                <h3>Passages I e II</h3>
+
+                <p>
+                  Consulte a escola sobre disponibilidade, níveis e horários.
+                </p>
+
+                <a href="#interesse"> Consultar → </a>
+              </article>
+            </div>
+
+            <!-- INVESTIMENTO -->
+            <div class="investment-box">
+              <div>
+                <span class="section-label"> INVESTIMENTO </span>
+
+                <h3>Quer saber quanto custa?</h3>
+
+                <p>
+                  Os valores podem variar conforme o curso, formato da aula e
+                  disponibilidade de turma. Consulte a escola para receber as
+                  condições atuais.
+                </p>
+              </div>
+
+              <a id="btnConsultarValores" class="btn btn-primary">
+                Consultar valores
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="valoresConteudo" hidden>
+          <div class="section-heading">
+            <span class="section-label"> INVESTIMENTO </span>
+
+            <h2>
+              Consulte os
+              <span>valores.</span>
+            </h2>
+
+            <p>
+              Confira os valores das modalidades oferecidas pela The Top
+              English.
+            </p>
+          </div>
+
+          <div class="prices-list">
+            <div class="price-item">
+              <div>
+                <h3>Curso Regular</h3>
+                <p>Do nível iniciante ao avançado.</p>
+              </div>
+
+              <strong>R$ XXX</strong>
+            </div>
+
+            <div class="price-item">
+              <div>
+                <h3>Inglês Infantil</h3>
+                <p>Turmas organizadas por idade.</p>
+              </div>
+
+              <strong>R$ XXX</strong>
+            </div>
+
+            <div class="price-item">
+              <div>
+                <h3>Aulas Individuais</h3>
+                <p>Atendimento individual.</p>
+              </div>
+
+              <strong>R$ XXX</strong>
+            </div>
+
+            <div class="price-item">
+              <div>
+                <h3>IELTS e TOEFL</h3>
+                <p>Preparação para exames de proficiência.</p>
+              </div>
+
+              <strong>R$ XXX</strong>
+            </div>
+
+            <div class="price-item">
+              <div>
+                <h3>Aula de reforço</h3>
+                <p>Reforço e complementação dos estudos.</p>
+              </div>
+
+              <strong>R$ XXX</strong>
+            </div>
+
+            <div class="price-item">
+              <div>
+                <h3>Passages I e II</h3>
+                <p>Consulte as condições disponíveis.</p>
+              </div>
+
+              <strong>R$ XXX</strong>
+            </div>
+          </div>
+
+          <p class="prices-note">
+            Os valores podem variar conforme o curso, formato da aula e
+            disponibilidade de turma.
+          </p>
+
+          <button type="button" class="btn btn-outline" id="btnVoltarCursos">
+            ← Voltar para cursos
+          </button>
+        </div>
+      </section>
+
+      <!-- =========================
+         COMO FUNCIONA
+    ========================== -->
+      <section id="como-funciona" class="section section-light">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label"> COMO FUNCIONA </span>
+
+            <h2>
+              Encontrar sua turma começa pela
+              <span>sua rotina.</span>
+            </h2>
+
+            <p>
+              Antes da matrícula, você conversa com a escola e informa seus
+              objetivos e os horários em que pode estudar.
+            </p>
+          </div>
+
+          <ol class="steps">
+            <li class="step-card">
+              <h3>Conte seu objetivo e seus horários</h3>
+
+              <p>
+                Informe pelo formulário para quem são as aulas, qual curso
+                procura e quando pode estudar.
+              </p>
+            </li>
+
+            <li class="step-card">
+              <h3>A teacher verifica as opções</h3>
+
+              <p>
+                A teacher Maureen verifica as turmas disponíveis e procura uma
+                opção compatível com seu horário.
+              </p>
+            </li>
+
+            <li
+              class="step-card"
+              data-confirmar="A aula experimental é oferecida? É gratuita?"
+            >
+              <h3>Conheça a aula</h3>
+
+              <p>
+                Quando disponível, você pode fazer uma aula experimental para
+                conhecer a turma e a forma de ensino.
+              </p>
+            </li>
+
+            <li class="step-card">
+              <h3>Matrícula e material</h3>
+
+              <p>
+                Com o horário definido, você realiza a matrícula e adquire o
+                material da Cambridge, com acesso ao Cambridge One.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- =========================
+         PROFESSORA
+    ========================== -->
+      <section id="professora" class="section">
+        <div class="container teacher">
+          <figure
+            class="teacher-photo"
+            data-confirmar="Foto da teacher Maureen na escola, com autorização"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M4 8h3l1.5-2h7L17 8h3v11H4z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+              <circle
+                cx="12"
+                cy="13"
+                r="3.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+
+            <figcaption>Foto da teacher Maureen na escola</figcaption>
+          </figure>
+
+          <div class="teacher-text">
+            <span class="section-label"> A PROFESSORA </span>
+
+            <h2>
+              Uma trajetória dedicada ao
+              <span>ensino de inglês.</span>
+            </h2>
+
+            <p data-confirmar="Grafia do nome e ano de início">
+              <strong>Teacher Maureen Rampersaud</strong>
+              ensina inglês desde 1997 e está à frente da The Top English.
+            </p>
+
+            <p>
+              Ao longo dessa trajetória, a escola construiu uma proposta baseada
+              no acompanhamento próximo dos alunos e na organização das aulas de
+              acordo com seus níveis e objetivos.
+            </p>
+
+            <p>
+              É a teacher quem conversa com cada aluno, orienta sobre o nível,
+              verifica as opções de horário e acompanha o desenvolvimento das
+              aulas.
+            </p>
+
+            <p>
+              As aulas utilizam livros da Cambridge University Press e a
+              plataforma Cambridge One, que permite continuar os estudos também
+              fora da sala de aula.
+            </p>
+
+            <a
+              class="btn btn-outline"
+              href="https://www.instagram.com/thetop_english_/"
+              target="_blank"
+              rel="noopener"
+            >
+              Conhecer a escola no Instagram
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         DÚVIDAS
+    ========================== -->
+      <section id="duvidas" class="section section-light">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label"> DÚVIDAS </span>
+
+            <h2>
+              Perguntas
+              <span>frequentes.</span>
+            </h2>
+
+            <p>
+              Algumas respostas para quem está pensando em começar ou continuar
+              seus estudos.
+            </p>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>
+                Preciso saber meu nível antes de consultar uma vaga?
+              </summary>
+
+              <p>
+                Não. Se você já estudou inglês, a teacher avalia seu nível na
+                conversa inicial e indica a turma mais adequada.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Meus horários são apertados. Tem como encaixar?</summary>
+
+              <p>
+                Os horários são combinados conforme a disponibilidade das
+                turmas. Informe os dias e períodos em que você pode estudar para
+                que a escola verifique as opções.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Como funcionam as aulas para crianças?</summary>
+
+              <p data-confirmar="Como as turmas infantis são organizadas">
+                As turmas infantis são organizadas por idade. Informe a idade da
+                criança no formulário e a teacher indica a opção adequada.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>As aulas são presenciais?</summary>
+
+              <p data-confirmar="Há também aulas online?">
+                Sim. As aulas acontecem na escola, em Palmas.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Tem aula experimental?</summary>
+
+              <p data-confirmar="Condições da aula experimental">
+                Quando há vaga na turma, pode ser possível realizar uma aula
+                experimental antes da matrícula. Consulte a escola para saber as
+                condições atuais.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Qual material é usado?</summary>
+
+              <p>
+                Os livros da Cambridge University Press, com acesso à plataforma
+                Cambridge One. O material é adquirido na matrícula.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Quanto custa?</summary>
+
+              <p>
+                O valor depende do curso e do formato, em turma ou individual.
+                Consulte a escola para receber os valores e condições atuais.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         INTERESSE / FORMULÁRIO
+         IDs e estrutura mantidos
+    ========================== -->
+      <section id="interesse" class="section interest-section">
+        <div class="container interest-grid">
+          <div class="interest-copy">
+            <span class="section-label"> QUERO ESTUDAR </span>
+
+            <h2>
+              Encontre uma opção que combine com seu <span>momento.</span>
+            </h2>
+
+            <p>
+              Conte quais são seus objetivos e em quais dias e períodos você
+              pode estudar. A escola verifica as opções disponíveis e responde
+              pelo WhatsApp.
+            </p>
+
+            <div class="process">
+              <div>
+                <b>01</b>
+                <span>Você informa seu objetivo e horário</span>
+              </div>
+
+              <div>
+                <b>02</b>
+                <span>A teacher verifica as opções</span>
+              </div>
+
+              <div>
+                <b>03</b>
+                <span>Você recebe as informações pelo WhatsApp</span>
+              </div>
+            </div>
+
+            <p class="interest-assurance">
+              Leva cerca de um minuto. Não é matrícula, é apenas uma consulta.
+            </p>
+          </div>
+
+          <div class="interest-form">
+            <noscript>
+              <p class="form-noscript">
+                Para consultar vaga, fale com a escola pelo
+                <a
+                  href="https://wa.me/5563981369088"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  WhatsApp </a
+                >.
+              </p>
+            </noscript>
+
+            <form class="form" id="form-vaga" novalidate>
+              <h3>Consulte cursos, horários e vagas</h3>
+
+              <div class="field">
+                <label for="f-nome"> Seu nome </label>
+
+                <input
+                  id="f-nome"
+                  name="nome"
+                  type="text"
+                  autocomplete="name"
+                  maxlength="80"
+                  required
+                  aria-describedby="f-nome-erro"
+                />
+
+                <p class="field__error" id="f-nome-erro" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="f-whatsapp"> WhatsApp com DDD </label>
+
+                <input
+                  id="f-whatsapp"
+                  name="whatsapp"
+                  type="tel"
+                  inputmode="tel"
+                  autocomplete="tel-national"
+                  placeholder="(63) 91234-5678"
+                  maxlength="16"
+                  required
+                  aria-describedby="f-whatsapp-erro"
+                />
+
+                <p class="field__error" id="f-whatsapp-erro" hidden></p>
+              </div>
+
+              <fieldset class="field">
+                <legend>As aulas são para</legend>
+
+                <div class="chips">
+                  <label class="chip">
+                    <input type="radio" name="para" value="mim" checked />
+                    <span>Para mim</span>
+                  </label>
+
+                  <label class="chip">
+                    <input type="radio" name="para" value="filho" />
+                    <span>Meu filho ou filha</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="field" data-idade hidden>
+                <label for="f-idade"> Idade da criança </label>
+
+                <input
+                  id="f-idade"
+                  name="idade"
+                  type="number"
+                  inputmode="numeric"
+                  min="2"
+                  max="17"
+                  aria-describedby="f-idade-erro"
+                />
+
+                <p class="field__error" id="f-idade-erro" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="f-servico"> Curso de interesse </label>
+
+                <select
+                  id="f-servico"
+                  name="servico"
+                  required
+                  aria-describedby="f-servico-erro"
+                >
+                  <option value="" selected disabled>Escolha uma opção</option>
+
+                  <option value="regular">
+                    Curso regular (Iniciante ao Avançado)
+                  </option>
+
+                  <option value="infantil">Inglês Infantil</option>
+
+                  <option value="passages">Passages I e II</option>
+
+                  <option value="individual">Aulas individuais</option>
+
+                  <option value="reforco">Aula de reforço</option>
+
+                  <option value="ielts">Preparatório IELTS</option>
+
+                  <option value="toefl">Preparatório TOEFL</option>
+
+                  <option value="nao-sei">Ainda não sei</option>
+                </select>
+
+                <p class="field__error" id="f-servico-erro" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="f-nivel"> Seu nível de inglês hoje </label>
+
+                <select id="f-nivel" name="nivel">
+                  <option value="Não sei dizer">Não sei dizer</option>
+
+                  <option value="Nunca estudei">Nunca estudei</option>
+
+                  <option value="Básico">Básico</option>
+
+                  <option value="Intermediário">Intermediário</option>
+
+                  <option value="Avançado">Avançado</option>
+                </select>
+              </div>
+
+              <fieldset
+                class="field"
+                data-grupo="dias"
+                aria-describedby="f-dias-erro"
+              >
+                <legend>Dias em que pode estudar</legend>
+
+                <div class="chips">
+                  <label class="chip">
+                    <input type="checkbox" name="dias" value="segunda" />
+                    <span>Seg</span>
+                  </label>
+
+                  <label class="chip">
+                    <input type="checkbox" name="dias" value="terça" />
+                    <span>Ter</span>
+                  </label>
+
+                  <label class="chip">
+                    <input type="checkbox" name="dias" value="quarta" />
+                    <span>Qua</span>
+                  </label>
+
+                  <label class="chip">
+                    <input type="checkbox" name="dias" value="quinta" />
+                    <span>Qui</span>
+                  </label>
+
+                  <label class="chip">
+                    <input type="checkbox" name="dias" value="sexta" />
+                    <span>Sex</span>
+                  </label>
+
+                  <label class="chip">
+                    <input type="checkbox" name="dias" value="sábado" />
+                    <span>Sáb</span>
+                  </label>
+                </div>
+
+                <p class="field__error" id="f-dias-erro" hidden></p>
+              </fieldset>
+
+              <fieldset
+                class="field"
+                data-grupo="periodos"
+                aria-describedby="f-periodos-erro"
+              >
+                <legend>Períodos</legend>
+
+                <div class="chips">
+                  <label class="chip">
+                    <input type="checkbox" name="periodos" value="manhã" />
+                    <span>Manhã</span>
+                  </label>
+
+                  <label class="chip">
+                    <input type="checkbox" name="periodos" value="tarde" />
+                    <span>Tarde</span>
+                  </label>
+
+                  <label class="chip">
+                    <input type="checkbox" name="periodos" value="noite" />
+                    <span>Noite</span>
+                  </label>
+                </div>
+
+                <p class="field__error" id="f-periodos-erro" hidden></p>
+              </fieldset>
+
+              <div class="field">
+                <label for="f-origem">
+                  Como conheceu a The Top English? (opcional)
+                </label>
+
+                <select
+                  id="f-origem"
+                  name="origem"
+                  aria-describedby="f-origem-dica"
+                >
+                  <option value="" selected>Prefiro não dizer</option>
+
+                  <option value="Google">Pesquisa no Google</option>
+
+                  <option value="Instagram">Instagram</option>
+
+                  <option value="Indicação">Indicação de alguém</option>
+
+                  <option value="Fachada">Passei em frente à escola</option>
+
+                  <option value="Outro">Outro</option>
+                </select>
+
+                <p class="field__hint" id="f-origem-dica">
+                  Ajuda a escola a saber por onde as pessoas a encontram.
+                </p>
+              </div>
+
+              <div class="field field--trap" aria-hidden="true">
+                <label for="f-website"> Deixe este campo vazio </label>
+
+                <input
+                  id="f-website"
+                  name="website"
+                  type="text"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="field">
+                <label class="check">
+                  <input
+                    type="checkbox"
+                    name="consentimento"
+                    id="f-consentimento"
+                    required
+                    aria-describedby="f-consentimento-erro"
+                  />
+
+                  <span>
+                    Autorizo a The Top English a usar estes dados para responder
+                    à minha consulta sobre vagas e horários, conforme o
+                    <a href="privacidade.html"> aviso de privacidade </a>.
+                  </span>
+                </label>
+
+                <p class="field__error" id="f-consentimento-erro" hidden></p>
+              </div>
+
+              <button class="btn btn-primary btn-full" type="submit">
+                Consultar pelo WhatsApp
+              </button>
+
+              <p class="form-note">
+                O WhatsApp abre com a mensagem pronta. É só conferir e enviar.
+              </p>
+            </form>
+
+            <div class="form-done" id="form-done" tabindex="-1" hidden>
+              <svg
+                class="form-done__icon"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M5 12.5l4.5 4.5L19 7.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Sua mensagem está pronta no WhatsApp</h3>
+
+              <p>Confira e toque em enviar. A escola responde por lá.</p>
+
+              <p class="form-done__fallback">
+                O WhatsApp não abriu?
+                <a href="#" data-done-link target="_blank" rel="noopener">
+                  Abrir a mensagem
+                </a>
+              </p>
+
+              <p class="form-done__warning" data-done-warning hidden>
+                O número de WhatsApp da escola ainda não foi configurado em
+                js/config.js.
+              </p>
+
+              <button class="btn btn-outline" type="button" data-form-reset>
+                Fazer outra consulta
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+     CONTATO
+========================== -->
+      <section id="contato" class="section contact-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label">CONTATO</span>
+
+            <h2>
+              Fale diretamente com a
+              <span>The Top English.</span>
+            </h2>
+
+            <p>
+              Quer saber sobre cursos, horários, valores ou disponibilidade?
+              Entre em contato com a escola.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <span class="contact-icon">📍</span>
+
+              <div>
+                <h3>Endereço</h3>
+
+                <p>
+                  406 Norte, Av. LO 14, Lote 10<br />
+                  Palmas - TO
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <span class="contact-icon">📱</span>
+
+              <div>
+                <h3>Telefone</h3>
+
+                <p>(63) 98136-9088</p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <span class="contact-icon">💬</span>
+
+              <div>
+                <h3>WhatsApp</h3>
+
+                <p>Converse com a escola diretamente.</p>
+
+                <a
+                  href="https://wa.me/5563981369088"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Abrir WhatsApp →
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.151607262608!2d-48.316578!3d-10.1683296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9324cc8233500503%3A0x3c4990c942b56e36!2sTop%20English!5e0!3m2!1spt-BR!2sbr!4v1790863190884!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="350"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="Localização da The Top English no Google Maps"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================
+       FOOTER
+  ========================== -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div>
+          <strong> THE TOP ENGLISH </strong>
+
+          <span> Inglês em Palmas desde 1997 </span>
+        </div>
+
+        <p>
+          Feito pela equipe TIzeiros·
+          <a href="privacidade.html"> Aviso de privacidade </a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- =========================
+       BOTÕES FLUTUANTES
+  ========================== -->
+
+    <a class="float-whatsapp is-hidden" href="#interesse" data-whatsapp>
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M20 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linejoin="round"
+        />
+      </svg>
+
+      WhatsApp
+    </a>
+
+    <button id="backTop" class="back-top" aria-label="Voltar ao topo">↑</button>
+
+    <!-- =========================
+       SCRIPTS
+  ========================== -->
+
+    <script src="script.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/formulario.js"></script>
+    <script src="js/extras.js"></script>
+
+    <script type="module" src="./js/galeriaSobre.js"></script>
+  </body>
 </html>

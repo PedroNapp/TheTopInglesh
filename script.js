@@ -15,19 +15,6 @@ document.querySelectorAll('.menu a').forEach(link => {
   });
 });
 
-const form = document.getElementById('interestForm');
-const message = document.getElementById('formMessage');
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const name = document.getElementById('name').value.trim();
-  if (!name) return;
-
-  message.textContent = `Obrigado, ${name}! Seu interesse foi registrado no protótipo.`;
-  form.reset();
-});
-
 const backTop = document.getElementById('backTop');
 
 window.addEventListener('scroll', () => {
@@ -36,4 +23,30 @@ window.addEventListener('scroll', () => {
 
 backTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// =========================
+// TROCA ENTRE CURSOS E VALORES
+// =========================
+
+const btnConsultarValores =
+  document.getElementById("btnConsultarValores");
+
+const btnVoltarCursos =
+  document.getElementById("btnVoltarCursos");
+
+const cursosConteudo =
+  document.getElementById("cursosConteudo");
+
+const valoresConteudo =
+  document.getElementById("valoresConteudo");
+
+btnConsultarValores.addEventListener("click", () => {
+  cursosConteudo.hidden = true;
+  valoresConteudo.hidden = false;
+});
+
+btnVoltarCursos.addEventListener("click", () => {
+  valoresConteudo.hidden = true;
+  cursosConteudo.hidden = false;
 });
