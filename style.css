@@ -7,7 +7,6 @@
 
   --green-deep: #0f4d3e;
   --green-deep-dark: #0b3a2f;
-  --green-deep-soft: #e6f1ea;
 
   --ink: #20252b;
   --muted: #68727d;
@@ -166,7 +165,6 @@ select {
   cursor: pointer;
 }
 
-
 /* ==================================================
    MENU MOBILE — ATÉ 900PX
 ================================================== */
@@ -224,7 +222,6 @@ select {
     text-align: center;
   }
 }
-
 
 /* ==================================================
    AJUSTES PARA CELULAR
@@ -442,127 +439,6 @@ select {
   place-items: center;
 }
 
-.experience-card {
-  position: relative;
-  z-index: 3;
-
-  width: 320px;
-  min-height: 350px;
-
-  padding: 55px 42px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  background: linear-gradient(145deg, #ffffff, #f7fbfa);
-
-  border: 1px solid rgba(15, 77, 62, 0.1);
-
-  border-radius: 20px;
-
-  box-shadow: 0 30px 80px rgba(15, 77, 62, 0.16);
-}
-
-.experience-small {
-  color: var(--green-dark);
-
-  font-size: 0.72rem;
-  font-weight: 900;
-
-  letter-spacing: 0.18em;
-}
-
-.experience-card > strong {
-  color: var(--green-deep-dark);
-
-  font-size: 5rem;
-  line-height: 1;
-
-  letter-spacing: -0.08em;
-
-  margin: 10px 0;
-}
-
-.experience-title {
-  color: var(--green-deep);
-
-  font-size: 1rem;
-  font-weight: 800;
-}
-
-.experience-line {
-  width: 55px;
-  height: 4px;
-
-  margin: 25px 0 18px;
-
-  background: var(--green);
-  border-radius: 20px;
-}
-
-.experience-card p {
-  color: var(--muted);
-
-  font-size: 0.82rem;
-  line-height: 1.7;
-}
-
-.visual-circle {
-  position: absolute;
-
-  border-radius: 50%;
-
-  border: 1px solid rgba(15, 77, 62, 0.12);
-}
-
-.visual-circle-one {
-  width: 480px;
-  height: 480px;
-}
-
-.visual-circle-two {
-  width: 350px;
-  height: 350px;
-
-  border-color: rgba(0, 166, 81, 0.16);
-}
-
-.language-badge {
-  position: absolute;
-
-  width: 58px;
-  height: 58px;
-
-  display: grid;
-  place-items: center;
-
-  border-radius: 50%;
-
-  background: #fff;
-
-  color: var(--green-deep-dark);
-
-  font-size: 0.8rem;
-  font-weight: 900;
-
-  box-shadow: 0 15px 35px rgba(15, 77, 62, 0.13);
-
-  z-index: 4;
-}
-
-.badge-one {
-  top: 55px;
-  right: 50px;
-}
-
-.badge-two {
-  bottom: 65px;
-  left: 45px;
-
-  color: var(--green-dark);
-}
-
 /* ==================================================
    SECTIONS
 ================================================== */
@@ -740,7 +616,6 @@ select {
   outline-offset: 3px;
 }
 
-
 /* ==================================================
    METODOLOGIA
 ================================================== */
@@ -773,18 +648,6 @@ select {
   transform: translateY(-5px);
 
   box-shadow: var(--shadow-hover);
-}
-
-.feature-number {
-  position: absolute;
-
-  top: 24px;
-  right: 26px;
-
-  color: rgba(11, 58, 47, 0.7);
-
-  font-size: 2.2rem;
-  font-weight: 900;
 }
 
 .feature-icon {
@@ -852,51 +715,6 @@ select {
   box-shadow: var(--shadow);
 }
 
-.course-card-featured {
-  background: linear-gradient(145deg, #0b3a2f, #0f4d3e);
-
-  border-color: transparent;
-}
-
-.course-card-featured h3,
-.course-card-featured p {
-  color: #fff;
-}
-
-.course-card-featured p {
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.course-top {
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-  margin-bottom: 28px;
-}
-
-.course-tag {
-  color: var(--green-dark);
-
-  font-size: 0.62rem;
-  font-weight: 900;
-
-  letter-spacing: 0.13em;
-}
-
-.course-card-featured .course-tag {
-  color: #72e7a4;
-}
-
-.course-number {
-  color: rgb(11 58 47 / 70%);
-
-  font-size: 0.72rem;
-  font-weight: 900;
-}
-
 .course-card h3 {
   color: var(--green-deep-dark);
 
@@ -917,10 +735,6 @@ select {
 
   font-size: 0.75rem;
   font-weight: 900;
-}
-
-.course-card-featured a {
-  color: #6ce39c;
 }
 
 /* ==================================================
@@ -2069,14 +1883,6 @@ html:not(.js) .interest-form .form {
 
     max-width: 480px;
   }
-
-  .google-flow {
-    grid-template-columns: 48px 1fr;
-  }
-
-  .flow-arrow {
-    grid-column: 2;
-  }
 }
 
 @media (max-width: 700px) {
@@ -2165,38 +1971,6 @@ html:not(.js) .interest-form .form {
 
   .hero-visual {
     min-height: 330px;
-  }
-
-  .experience-card {
-    width: 260px;
-
-    min-height: 290px;
-
-    padding: 40px 32px;
-  }
-
-  .experience-card > strong {
-    font-size: 4rem;
-  }
-
-  .visual-circle-one {
-    width: 330px;
-    height: 330px;
-  }
-
-  .visual-circle-two {
-    width: 250px;
-    height: 250px;
-  }
-
-  .badge-one {
-    top: 15px;
-    right: 20px;
-  }
-
-  .badge-two {
-    bottom: 15px;
-    left: 20px;
   }
 
   .section {
@@ -3069,3 +2843,25 @@ html:not(.js) .interest-form .form {
   }
 }
 
+/* ==================================================
+   PÁGINA 404
+================================================== */
+
+.not-found {
+  display: grid;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.not-found h1 {
+  color: var(--green-deep-dark);
+  font-size: clamp(2rem, 1.35rem + 2.4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.not-found p {
+  max-width: 44ch;
+  margin: 1rem 0 1.5rem;
+  color: var(--muted);
+}
