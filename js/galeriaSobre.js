@@ -21,22 +21,6 @@ const galleryImages = [
     description:
       "Um espaço preparado para proporcionar uma experiência agradável de aprendizagem.",
   },
-
-  {
-    src: "assets/escola-3.jpg",
-    alt: "Ambiente da The Top English",
-    title: "Ambiente de estudos",
-    description:
-      "Conheça um pouco dos espaços utilizados pelos alunos durante as aulas.",
-  },
-
-  {
-    src: "assets/escola-4.jpg",
-    alt: "Espaço interno da The Top English",
-    title: "Experiência The Top English",
-    description:
-      "Um ambiente pensado para tornar o aprendizado de inglês mais agradável.",
-  },
 ];
 
 let currentImage = 0;
