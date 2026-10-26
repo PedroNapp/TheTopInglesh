@@ -906,7 +906,7 @@ select {
   height: 100%;
 
   object-fit: cover;
-  object-position: 30% 30%;
+  object-position: 50% 25%;
 }
 
 .teacher-text p {
