@@ -3019,3 +3019,52 @@ html:not(.js) .interest-form .form {
   margin: 1rem 0 1.5rem;
   color: var(--muted);
 }
+
+/* ==================================================
+   FOOTER — CELULAR (menos espaço, mesmo conteúdo)
+================================================== */
+
+@media (max-width: 600px) {
+  .footer {
+    padding-top: 32px;
+  }
+
+  .footer-grid {
+    gap: 16px;
+  }
+
+  .footer-logo {
+    padding: 8px 12px;
+  }
+
+  .footer-logo img {
+    width: 150px;
+  }
+
+  .footer-brand p {
+    margin-top: 10px;
+
+    font-size: 0.9375rem;
+  }
+
+  .footer-title {
+    margin-bottom: 2px;
+
+    font-size: 1rem;
+  }
+
+  .footer-col a {
+    min-height: 40px;
+
+    gap: 10px;
+  }
+
+  .footer-bottom {
+    margin-top: 16px;
+    padding: 12px 0 16px;
+  }
+
+  .footer-bottom a {
+    min-height: 40px;
+  }
+}
