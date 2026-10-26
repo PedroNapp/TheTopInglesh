@@ -13,7 +13,7 @@
       document.documentElement.classList.add("js");
     </script>
 
-    <link rel="icon" type="image/png" href="assets/globo.png" />
+    <link rel="icon" type="image/png" href="assets/brand/globo.png" />
     <meta name="theme-color" content="#0f4d3e" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -40,8 +40,10 @@
       <div class="container nav">
         <a href="#inicio" class="brand" aria-label="The Top English - início">
           <img
-            src="assets/identidade-top-english.png"
+            src="assets/brand/logo-top-english.png"
             alt="The Top English - Curso de Idiomas"
+            width="567"
+            height="118"
           />
         </a>
 
@@ -130,7 +132,7 @@
               <!-- Globo -->
               <div class="globe-image">
                 <img
-                  src="assets/globo.png"
+                  src="assets/brand/globo.png"
                   alt="Globo terrestre"
                   class="globo"
                 />
@@ -162,7 +164,7 @@
       <!-- =========================
          SOBRE
     ========================== -->
-      <section id="sobre" class="section">
+      <section id="sobre" class="section sobre">
         <div class="container two-columns">
           <div>
 
@@ -189,19 +191,27 @@
             </a>
           </div>
 
-          <div class="school-highlight">
-            <div class="highlight-main">
-              <span id="galleryTitle" class="highlight-number">
-                Fachada da escola
-              </span>
+          <div class="sobre-foto">
+            <div class="school-gallery">
+              <img
+                id="galleryImage"
+                class="galleryImage"
+                src="assets/fotos/sala-de-aula.jpg"
+                alt="Alunos e a teacher Maureen em volta da mesa na sala de aula da The Top English"
+                width="928"
+                height="890"
+              />
 
-              <p id="galleryDescription">
-                Conheça um pouco do espaço e da experiência da The Top English.
-              </p>
-            </div>
+              <div class="gallery-caption">
+                <span id="galleryTitle" class="gallery-title">Sala de aula</span>
 
-            <div class="highlight-items">
-              <div class="school-gallery-wrapper">
+                <p id="galleryDescription">
+                  Um espaço preparado para proporcionar uma experiência
+                  agradável de aprendizagem.
+                </p>
+              </div>
+
+              <div class="gallery-controls">
                 <button
                   class="gallery-btn gallery-prev"
                   type="button"
@@ -209,15 +219,6 @@
                 >
                   <span>‹</span>
                 </button>
-
-                <div class="school-gallery">
-                  <img
-                    id="galleryImage"
-                    class="galleryImage"
-                    src="assets/escola-1.jpg"
-                    alt="Espaço da The Top English"
-                  />
-                </div>
 
                 <button
                   class="gallery-btn gallery-next"
@@ -254,7 +255,7 @@
           <div class="cards-grid">
             <article class="feature-card">
 
-              <div class="feature-icon">📚</div>
+              <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 0 4 20.5z"/><path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 1 1.5 1.5z"/></svg></div>
 
               <h3>Material Cambridge</h3>
 
@@ -266,7 +267,7 @@
 
             <article class="feature-card">
 
-              <div class="feature-icon">🎯</div>
+              <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="m16 11 2 2 4-4"/></svg></div>
 
               <h3>Acompanhamento próximo</h3>
 
@@ -278,7 +279,7 @@
 
             <article class="feature-card">
 
-              <div class="feature-icon">👥</div>
+              <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 19.5a6 6 0 0 1 12 0"/><path d="M16 4.9a3.2 3.2 0 0 1 0 6.2"/><path d="M18 14a6 6 0 0 1 3 5.5"/></svg></div>
 
               <h3>Diferentes formatos</h3>
 
@@ -555,7 +556,7 @@
             data-confirmar="Foto da teacher Maureen na escola, com autorização"
           >
             <img
-              src="assets/profileMaureen.jpeg"
+              src="assets/fotos/maureen.jpeg"
               alt="Teacher Maureen sorrindo, sentada à mesa na sala da escola"
               width="1000"
               height="1241"
@@ -742,6 +743,7 @@
                   href="https://wa.me/5563981369088"
                   target="_blank"
                   rel="noopener"
+                  data-whatsapp
                 >
                   WhatsApp </a
                 >.
@@ -1064,7 +1066,7 @@
 
           <div class="contact-grid">
             <div class="contact-card">
-              <span class="contact-icon">📍</span>
+              <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg></span>
 
               <div>
                 <h3>Endereço</h3>
@@ -1073,21 +1075,27 @@
                   406 Norte, Av. LO 14, Lote 10<br />
                   Palmas - TO
                 </p>
+
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=Top+English+406+Norte+Av.+LO+14+Lote+10+Palmas+TO" target="_blank" rel="noopener">
+                  Ver no mapa →
+                </a>
               </div>
             </div>
 
             <div class="contact-card">
-              <span class="contact-icon">📱</span>
+              <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M11 18.5h2"/></svg></span>
 
               <div>
                 <h3>Telefone</h3>
 
                 <p>(63) 98136-9088</p>
+
+                <a href="tel:+5563981369088">Ligar agora →</a>
               </div>
             </div>
 
             <div class="contact-card">
-              <span class="contact-icon">💬</span>
+              <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a7.5 7.5 0 0 1-11 6.6L4 19.5l1.5-4.7a7.5 7.5 0 1 1 15-3.3z"/></svg></span>
 
               <div>
                 <h3>WhatsApp</h3>
@@ -1125,16 +1133,76 @@
        FOOTER
   ========================== -->
     <footer class="footer">
-      <div class="container footer-content">
-        <div>
-          <strong> THE TOP ENGLISH </strong>
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="#inicio" class="footer-logo" aria-label="The Top English - início">
+            <img
+              src="assets/brand/logo-top-english.png"
+              alt="The Top English - Curso de Idiomas"
+              width="567"
+              height="118"
+              loading="lazy"
+            />
+          </a>
 
-          <span> Inglês em Palmas desde 1997 </span>
+          <p>Inglês em Palmas desde 1997.</p>
         </div>
 
+        <nav class="footer-col" aria-label="Rodapé">
+          <h2 class="footer-title">Navegue</h2>
+
+          <ul>
+            <li><a href="#sobre">A escola</a></li>
+            <li><a href="#metodologia">Metodologia</a></li>
+            <li><a href="#modalidades">Cursos</a></li>
+            <li><a href="#como-funciona">Como funciona</a></li>
+            <li><a href="#duvidas">Dúvidas</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h2 class="footer-title">Fale com a escola</h2>
+
+          <ul>
+            <li>
+              <a href="tel:+5563981369088">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M11 18.5h2"/></svg>(63) 98136-9088
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/5563981369088"
+                target="_blank"
+                rel="noopener"
+                data-whatsapp
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a7.5 7.5 0 0 1-11 6.6L4 19.5l1.5-4.7a7.5 7.5 0 1 1 15-3.3z"/></svg>WhatsApp
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/thetop_english_/"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg>Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Top+English+406+Norte+Av.+LO+14+Lote+10+Palmas+TO" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>406 Norte, Av. LO 14, Lote 10 - Palmas, TO
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© 2026 The Top English</p>
+
         <p>
-          Feito pela equipe TIzeiros·
-          <a href="privacidade.html"> Aviso de privacidade </a>
+          <a href="privacidade.html">Aviso de privacidade</a>
+          <span class="footer-credit">Feito pela equipe TIzeiros</span>
         </p>
       </div>
     </footer>

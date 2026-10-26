@@ -7,16 +7,8 @@ const galleryDescription = document.querySelector("#galleryDescription");
 
 const galleryImages = [
   {
-    src: "assets/escola-1.jpg",
-    alt: "Fachada da The Top English",
-    title: "Fachada da escola",
-    description:
-      "Conheça a fachada e o ambiente da The Top English.",
-  },
-
-  {
-    src: "assets/escola-2.webp",
-    alt: "Sala de aula da The Top English",
+    src: "assets/fotos/sala-de-aula.jpg",
+    alt: "Alunos e a teacher Maureen em volta da mesa na sala de aula da The Top English",
     title: "Sala de aula",
     description:
       "Um espaço preparado para proporcionar uma experiência agradável de aprendizagem.",
@@ -89,5 +81,9 @@ galleryPrev.addEventListener("click", () => {
 });
 
 
-// Inicia o carrossel automático
-startGalleryTimer();
+// Com uma foto só, não há o que alternar: esconde as setas e não roda o timer
+if (galleryImages.length > 1) {
+  startGalleryTimer();
+} else {
+  document.querySelector(".school-gallery").classList.add("is-single");
+}
