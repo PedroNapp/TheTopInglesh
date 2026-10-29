@@ -15,9 +15,9 @@ window.SITE_CONFIG = {
 
   // Endereço do Web App do Google Apps Script (apps-script/Code.gs), terminado em /exec.
   // Vazio: o formulário funciona só com o WhatsApp, sem registrar na planilha.
-  planilhaUrl: '',
+  planilhaUrl: 'https://script.google.com/macros/s/AKfycbxXeQ9hT-si9ZscwlkItTn9dt1FB4AwanL4OtMGmGB7XnXPAqKl4B83hXcQ-2D7q3ngXA/exec',
 
   // Data da versão atual de privacidade.html. Vai para a planilha junto com cada consulta,
   // como registro de qual aviso a pessoa aceitou (LGPD, art. 8º). Atualize ao mudar o aviso.
-  versaoAviso: '2026-09-18'
+  versaoAviso: '2026-10-29'
 };
