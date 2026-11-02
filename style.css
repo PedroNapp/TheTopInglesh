@@ -3068,3 +3068,52 @@ html:not(.js) .interest-form .form {
     min-height: 40px;
   }
 }
+
+
+/* ==================================================
+   METODOLOGIA CAMBRIDGE INTERCHANGE
+================================================== */
+
+.metodologia-heading {
+  max-width: 850px;
+}
+
+.metodologia-eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--green-deep);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.metodologia-heading h2 {
+  max-width: 780px;
+}
+
+.metodologia-heading p {
+  max-width: 68ch;
+}
+
+.metodologia-grid {
+  align-items: stretch;
+}
+
+.metodologia-card {
+  height: 100%;
+}
+
+.metodologia-card h3 {
+  max-width: 18ch;
+}
+
+@media (max-width: 760px) {
+  .metodologia-heading {
+    margin-bottom: 32px;
+  }
+
+  .metodologia-card {
+    padding: 30px 26px;
+  }
+}
+
