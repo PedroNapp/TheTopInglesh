@@ -3159,3 +3159,55 @@ html:not(.js) .interest-form .form {
     max-width: none;
   }
 }
+
+.course-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 270px;
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #dfe5e1;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgba(20, 45, 30, .07);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.course-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 42px;
+  height: 4px;
+  background: var(--green);
+  border-radius: 0 0 4px 4px;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  border-color: #b7cfc0;
+  box-shadow: 0 14px 30px rgba(20, 45, 30, .12);
+}
+
+.course-card h3 {
+  color: var(--green-deep-dark);
+  font-size: 1.22rem;
+  font-weight: 800;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+.course-card p {
+  color: #626d66;
+  font-size: .84rem;
+  line-height: 1.7;
+}
+
+.course-card a {
+  margin-top: auto;
+  padding-top: 24px;
+  color: var(--green-dark);
+  font-size: .78rem;
+  font-weight: 900;
+}
