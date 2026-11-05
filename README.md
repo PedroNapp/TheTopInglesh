@@ -12,7 +12,7 @@ Protótipo institucional em HTML + CSS + JavaScript, baseado na identidade visua
 - `privacidade.html` — aviso de privacidade (LGPD) ligado ao formulário
 - `apps-script/Code.gs` — script da Planilha Google que recebe as consultas
 - `js/admin-integracao.js`, `js/supabase.js`, `admin/` — painel de edição de conteúdo (Supabase)
-- `assets/identidade-top-english.png` — recorte da identidade visual da planilha
+- `assets/brand/logo-original-com-endereco.png` — recorte da identidade visual da planilha
 
 ## Como entrar no site
 Veja nossa publicação no GithubPages
