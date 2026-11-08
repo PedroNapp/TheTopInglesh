@@ -28,57 +28,79 @@ whatsapp: '5563981369088',
 3. `index.html`, linha `"telephone"` nos dados para o Google (perto do topo do arquivo).
 4. `privacidade.html`, seção “Seus direitos”.
 
-## Novidades e promoções (barra verde do topo)
+## Atualizar o aviso do topo
 
-Arquivo `index.html`. Procure por `Barra de aviso` e troque a frase:
+O aviso fica no início do `index.html`, dentro do elemento com a classe `notice`.
+Atualmente, o texto informa sobre novas turmas e horários.
+
+Para alterar a mensagem, edite o texto e o link dentro de:
 
 ```html
-<p class="container notice__inner">Matrículas abertas para 2027. <a href="#consultar">Veja se há vaga no seu horário</a></p>
+<div class="notice">
+  <p class="container notice-inner">
+    <strong>Novas turmas e horários:</strong>
+    consulte a disponibilidade para este semestre.
+    <a href="#interesse">Ver opções de horário →</a>
+  </p>
+</div>
 ```
 
-Para **esconder** a barra, acrescente `hidden` na linha de cima dela: `<div class="notice" hidden>`. Para mostrar de novo, apague o `hidden`.
+Para ocultar temporariamente o aviso, acrescente o atributo `hidden` ao elemento
+`div.notice`. Para exibi-lo novamente, remova esse atributo.
 
 ## Mudar a descrição de um curso
 
 Arquivo `index.html`. Procure pelo nome do curso (por exemplo, `Preparatório IELTS`) e troque o texto do parágrafo logo abaixo.
 
-## Colocar o logo da escola
+## Trocar o logo ou o ícone do site
 
-O site mostra “Inserir logo” porque a equipe não tinha o arquivo original. Com o logo em mãos, de preferência em SVG ou PNG com fundo transparente:
+O logo utilizado no cabeçalho está em `assets/brand/logo-top-english.png`.
+Para substituí-lo:
 
-1. Salve o arquivo como `assets/img/logo.svg` (ou `logo.png`).
-2. Em `index.html` e em `privacidade.html`, troque a linha `<span class="brand__logo-slot" …>Inserir logo</span>` por:
+1. Salve a nova imagem na pasta `assets/brand/`, mantendo um nome de arquivo claro.
+2. No `index.html`, localize a imagem dentro do link com a classe `brand`.
+3. Atualize o valor de `src` para o caminho da nova imagem e revise o texto alternativo (`alt`).
+4. Confira também o logo na página `privacidade.html`, caso ele seja utilizado nela.
+5. Abra o site em desktop e celular para conferir tamanho, proporção e legibilidade.
 
-```html
-<img class="brand__logo" src="assets/img/logo.svg" alt="" width="48" height="48">
+O ícone da aba do navegador é definido no `index.html` por `assets/brand/globo.png`.
+Se ele for substituído, atualize o caminho do `href` na tag `link rel="icon"`.
+
+## Trocar a foto da teacher
+
+A foto exibida na seção da professora está em `assets/fotos/maureen.jpeg`.
+
+Para substituí-la:
+
+1. Salve a nova fotografia em `assets/fotos/`.
+2. No `index.html`, localize a seção `id="professora"` e o elemento `figure` com a classe `teacher-photo`.
+3. Atualize o caminho do atributo `src` da imagem e revise o texto alternativo (`alt`).
+4. Mantenha as dimensões e o atributo `loading="lazy"` ou ajuste-os de acordo com a nova imagem.
+5. Publique somente fotografias autorizadas pela pessoa retratada e confira a apresentação em celular e computador.
+
+## Atualizar a galeria da seção “A escola”
+
+A galeria é configurada em `js/galeriaSobre.js`, no array `galleryImages`.
+
+Cada fotografia deve ter os campos `src`, `alt`, `title` e `description`. Exemplo:
+
+```js
+{
+  src: "assets/fotos/nova-foto.jpg",
+  alt: "Descrição objetiva do que aparece na fotografia",
+  title: "Título da imagem",
+  description: "Breve descrição da fotografia.",
+},
 ```
 
-   O `alt` fica vazio porque o nome da escola já aparece escrito ao lado.
+Antes de adicionar uma imagem, coloque o arquivo na pasta `assets/fotos/` e confira se o caminho informado em `src` corresponde ao nome e à extensão do arquivo. Use apenas imagens autorizadas pela escola e evite incluir fotografias de alunos sem autorização adequada.
 
-3. Favicon (ícone da aba do navegador): gere a partir do logo, por exemplo no site realfavicongenerator.net. Salve como `assets/img/favicon.png` e troque, nos três arquivos `.html`, a linha `<link rel="icon" href="data:,">` por:
+## Depoimentos
 
-```html
-<link rel="icon" href="assets/img/favicon.png">
-```
-
-4. Imagem de compartilhamento (`assets/img/og-image.png`): também mostra “Inserir logo”. Peça à equipe para gerar de novo com o logo, ou troque por uma imagem de 1200 × 630 px feita no Canva.
-
-## Colocar a foto da teacher
-
-1. Salve a foto em formato `.webp` ou `.jpg`, com até 1200 px de largura, como `assets/img/maureen.webp`.
-2. No `index.html`, procure por `Foto da teacher Maureen na escola` e troque o bloco `<figure class="about__photo" …> … </figure>` inteiro por:
-
-```html
-<figure class="about__photo about__photo--img">
-  <img src="assets/img/maureen.webp" alt="Teacher Maureen na sala de aula da The Top English" width="900" height="1125" loading="lazy">
-</figure>
-```
-
-## Mostrar depoimentos
-
-Só publique depoimentos reais, com autorização por escrito de quem falou (e dos responsáveis, no caso de crianças).
-
-No `index.html`, procure por `id="depoimentos"`, apague a palavra `hidden` dessa linha e troque os textos de exemplo pelos depoimentos e nomes.
+A versão atual do `index.html` não possui uma seção de depoimentos ativa. Não adicione
+avaliações ou falas fictícias. Caso a escola queira incluir depoimentos futuramente,
+solicite textos reais e autorização de publicação dos alunos ou responsáveis antes
+de desenvolver e publicar essa seção.
 
 ## Endereço e horário de atendimento
 
@@ -92,4 +114,4 @@ As consultas com mais de 6 meses são apagadas sozinhas, como diz o aviso de pri
 
 ## Conferir o que falta
 
-Abra o site com `?revisar` no fim do endereço, por exemplo `https://…/thetopenglish/?revisar`. Tudo que ainda precisa ser confirmado aparece tracejado.
+Abra o site com `?revisar` no fim do endereço, por exemplo `https://thetopenglish.com.br/?revisar`. Tudo que ainda precisa ser confirmado aparece tracejado.
