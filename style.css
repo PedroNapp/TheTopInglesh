@@ -1167,6 +1167,19 @@ select {
   font-weight: 900;
 }
 
+.course-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.course-card__links a {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 /* ==================================================
    INVESTIMENTO
 ================================================== */
@@ -2125,6 +2138,23 @@ html:not(.js) .interest-form .form {
   font-weight: 800;
 }
 
+.contact-card a[data-whatsapp] {
+  min-height: 38px;
+  margin-top: 4px;
+  padding: 0.45rem 0.85rem;
+  color: #0d754b;
+  text-decoration: none;
+  background: #eaf7ef;
+  border: 1px solid #cce9d6;
+  border-radius: 999px;
+  transition: background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.contact-card a[data-whatsapp]:hover {
+  background: #dcf2e4;
+  border-color: #a9d9bb;
+}
+
 .contact-card a:focus-visible {
   outline: 2px solid var(--green-dark);
   outline-offset: 3px;
@@ -2332,7 +2362,14 @@ html:not(.js) .interest-form .form {
 }
 
 .float-whatsapp:hover {
+  color: #fff;
   background: #00672f;
+  box-shadow: 0 10px 26px rgba(0, 103, 47, 0.28);
+}
+
+.float-whatsapp:focus-visible {
+  outline: 3px solid rgba(0, 166, 81, 0.28);
+  outline-offset: 3px;
 }
 
 .float-whatsapp svg {
@@ -3236,4 +3273,18 @@ html:not(.js) .interest-form .form {
   .brand img { width: 48px; height: 48px; flex-basis: 48px; }
   .brand-wordmark strong { font-size: 14px; }
   .brand-wordmark small { font-size: 8px; letter-spacing: .12em; }
+}
+
+
+/* Foto da professora: preservar o retrato inteiro, sem recortar cabeça ou corpo. */
+.teacher-photo:has(img) {
+  background: var(--soft, #f4f8f7);
+}
+.teacher-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: var(--soft, #f4f8f7);
 }

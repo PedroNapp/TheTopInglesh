@@ -215,41 +215,153 @@ TO authenticated;
 
 -- ============================================================
 -- 12. CONTEÚDO INICIAL DO SITE
--- ============================================================
+-- Atualização idempotente do conteúdo inicial, alinhada ao fallback em admin/js/dados.js.
+INSERT INTO public.site_conteudo (secao, elemento, conteudo) VALUES
+  ('inicio', 'heroTitle', 'Inglês com experiência.'),
+  ('inicio', 'heroDescription', 'Há mais de duas décadas ensinando inglês, a The Top English oferece aulas para diferentes níveis, idades e objetivos, com acompanhamento próximo da teacher.'),
+  ('inicio', 'heroButton', 'Quero estudar'),
+  ('escola', 'schoolTitle', 'Uma escola construída ao longo de anos de experiência.'),
+  ('escola', 'schoolText1', 'A The Top English é uma escola de inglês em Palmas que atua desde 1997. Ao longo dessa trajetória, o ensino foi construído com acompanhamento próximo dos alunos e atenção às necessidades de cada turma.'),
+  ('escola', 'schoolText2', 'Aqui, o aluno pode conhecer as opções de cursos, informar seus objetivos e horários e conversar diretamente com a escola para encontrar a alternativa mais adequada.'),
+  ('escola', 'schoolCardTitle', 'Inglês para diferentes objetivos'),
+  ('escola', 'schoolCardText', 'Conheça as opções de aulas e converse com a escola para verificar a modalidade e a disponibilidade mais adequada.'),
+  ('metodologia', 'methodTitle', 'Aprender inglês para se comunicar de verdade.'),
+  ('metodologia', 'methodDescription', 'A The Top English utiliza a metodologia Cambridge Interchange, baseada em uma abordagem comunicativa que prioriza a prática do inglês em situações do mundo real.'),
+  ('metodologia', 'method1Title', 'Abordagem comunicativa'),
+  ('metodologia', 'method1Text', 'A prática do inglês é relacionada a situações do mundo real, aproximando o aprendizado do uso cotidiano do idioma.'),
+  ('metodologia', 'method2Title', 'Fluência e exatidão'),
+  ('metodologia', 'method2Text', 'O curso busca desenvolver a fluência e a precisão do aluno durante a comunicação em inglês.'),
+  ('metodologia', 'method3Title', 'Habilidades do idioma'),
+  ('metodologia', 'method3Text', 'A aprendizagem explora as habilidades necessárias para o desenvolvimento do aluno no domínio de um novo idioma.'),
+  ('modalidades', 'mod1Title', 'Curso Regular'),
+  ('modalidades', 'mod1Text', 'Aprenda inglês desde os primeiros passos até níveis avançados, desenvolvendo sua comunicação e confiança para utilizar o idioma no dia a dia.'),
+  ('modalidades', 'mod2Title', 'Inglês Infantil'),
+  ('modalidades', 'mod2Text', 'Um primeiro contato com o inglês, estimulando o aprendizado e a familiaridade com o idioma desde a infância.'),
+  ('modalidades', 'mod3Title', 'Aulas Individuais'),
+  ('modalidades', 'mod3Text', 'Aulas personalizadas de acordo com seus objetivos, nível de inglês e necessidades, com maior flexibilidade de horários.'),
+  ('valores', 'price1Name', 'Infantil'),
+  ('valores', 'price1Value', '6x de R$ 215,00'),
+  ('valores', 'price2Name', 'Iniciante A'),
+  ('valores', 'price2Value', '6x de R$ 215,00'),
+  ('valores', 'price3Name', 'Iniciante B'),
+  ('valores', 'price3Value', '6x de R$ 255,00'),
+  ('valores', 'price4Name', 'Intermediário'),
+  ('valores', 'price4Value', '6x de R$ 295,00'),
+  ('valores', 'price5Name', 'Avançado'),
+  ('valores', 'price5Value', '6x de R$ 335,00'),
+  ('valores', 'price6Name', 'Passages 1'),
+  ('valores', 'price6Value', '6x de R$ 365,00'),
+  ('valores', 'price7Name', 'Passages 2'),
+  ('valores', 'price7Value', '6x de R$ 395,00'),
+  ('valores', 'price8Name', 'Individual'),
+  ('valores', 'price8Value', '6x de R$ 500,00'),
+  ('valores', 'price9Name', 'TOEFL'),
+  ('valores', 'price9Value', '6x de R$ 600,00'),
+  ('valores', 'price10Name', 'IELTS'),
+  ('valores', 'price10Value', '6x de R$ 600,00'),
+  ('valores', 'price11Name', 'Aula de reforço'),
+  ('valores', 'price11Value', 'R$ 65,00'),
+  ('valores', 'price12Name', 'Preparatório para Mestrado'),
+  ('valores', 'price12Value', 'Valor negociável conforme as necessidades do aluno.'),
+  ('valores', 'pricesNote', 'Os valores podem variar conforme o curso, formato da aula e disponibilidade de turma.'),
+  ('contato', 'address', '406 Norte, Av. LO 14, Lote 10 — Palmas - TO'),
+  ('contato', 'phone', '(63) 98136-9088'),
+  ('contato', 'whatsapp', '(63) 98136-9088')
+ON CONFLICT (secao, elemento) DO UPDATE SET
+  conteudo = EXCLUDED.conteudo,
+  atualizado_em = NOW();
 
-INSERT INTO public.site_conteudo
-    (secao, elemento, conteudo)
-VALUES
-    ('inicio', 'heroTitle', 'Seu inglês pode ir mais longe.'),
-    ('inicio', 'heroDescription', 'Conheça a The Top English, sua escola de inglês em Palmas, e encontre uma forma de estudo que combine com sua rotina.'),
-    ('inicio', 'heroButton', 'Quero estudar'),
-
-    ('escola', 'schoolTitle', 'Conheça a The Top English'),
-    ('escola', 'schoolText1', 'A The Top English é uma escola de idiomas voltada ao ensino de inglês. Aqui, o visitante encontra informações sobre a escola, sua metodologia, modalidades de aula e formas de contato.'),
-    ('escola', 'schoolText2', 'O site foi pensado para facilitar o primeiro contato de pessoas interessadas em estudar e deixar as principais informações disponíveis em um único lugar.'),
-    ('escola', 'schoolCardTitle', 'Inglês para diferentes objetivos'),
-    ('escola', 'schoolCardText', 'Conheça as opções de aulas e converse com a escola para verificar a modalidade e a disponibilidade mais adequada.'),
-
-    ('metodologia', 'methodTitle', 'Aprender inglês de forma organizada'),
-    ('metodologia', 'methodDescription', 'Consulte as informações da escola e entre em contato para conhecer melhor a proposta das aulas.'),
-    ('metodologia', 'method1Title', 'Metodologia'),
-    ('metodologia', 'method1Text', 'Informações sobre a proposta de ensino e o funcionamento das aulas.'),
-    ('metodologia', 'method2Title', 'Aulas individuais'),
-    ('metodologia', 'method2Text', 'Uma opção para quem busca um atendimento mais individualizado.'),
-    ('metodologia', 'method3Title', 'Aulas em grupo'),
-    ('metodologia', 'method3Text', 'Turmas organizadas conforme disponibilidade e formação dos grupos.'),
-
-    ('modalidades', 'mod1Title', 'Individual'),
-    ('modalidades', 'mod1Text', 'Atendimento individual, com horário definido conforme disponibilidade.'),
-    ('modalidades', 'mod2Title', 'Em grupo'),
-    ('modalidades', 'mod2Text', 'Turmas com organização de horários e disponibilidade de vagas.'),
-    ('modalidades', 'mod3Title', 'Consulte a escola'),
-    ('modalidades', 'mod3Text', 'Envie seus dados e informe seus horários para verificar as opções disponíveis.'),
-
-    ('contato', 'address', '406 Norte, Av. LO 14, Lote 10 — Palmas - TO'),
-    ('contato', 'phone', '(63) 3215-1652'),
-    ('contato', 'whatsapp', '(63) 3215-1652');
-
--- ============================================================
 -- FIM DA CONFIGURAÇÃO
+
+
 -- ============================================================
+-- 10. GERENCIAMENTO DE IMAGENS (SUPABASE STORAGE)
+-- Execute este bloco uma única vez no SQL Editor do Supabase.
+-- ============================================================
+
+CREATE TABLE IF NOT EXISTS public.site_imagens (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    chave TEXT NOT NULL UNIQUE,
+    nome TEXT NOT NULL,
+    descricao TEXT NOT NULL DEFAULT '',
+    caminho TEXT NOT NULL,
+    alt TEXT NOT NULL DEFAULT '',
+    ordem INTEGER NOT NULL DEFAULT 0,
+    atualizado_em TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    atualizado_por UUID REFERENCES auth.users(id)
+);
+
+-- Garante compatibilidade com instalações anteriores da tabela.
+ALTER TABLE public.site_imagens
+    ADD COLUMN IF NOT EXISTS descricao TEXT NOT NULL DEFAULT '',
+    ADD COLUMN IF NOT EXISTS ordem INTEGER NOT NULL DEFAULT 0;
+
+-- Descrição padrão da imagem local que inicia a galeria.
+UPDATE public.site_imagens
+SET descricao = 'Um espaço preparado para proporcionar uma experiência agradável de aprendizagem.',
+    alt = COALESCE(NULLIF(alt, ''), 'Alunos e a teacher Maureen em volta da mesa na sala de aula da The Top English')
+WHERE chave IN ('escola_galeria', 'galeria_sala-de-aula')
+  AND (descricao IS NULL OR descricao = '');
+
+ALTER TABLE public.site_imagens ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS "Publico pode visualizar imagens cadastradas" ON public.site_imagens;
+CREATE POLICY "Publico pode visualizar imagens cadastradas"
+ON public.site_imagens FOR SELECT TO anon, authenticated
+USING (true);
+
+DROP POLICY IF EXISTS "Admin pode inserir imagens cadastradas" ON public.site_imagens;
+CREATE POLICY "Admin pode inserir imagens cadastradas"
+ON public.site_imagens FOR INSERT TO authenticated
+WITH CHECK ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin');
+
+DROP POLICY IF EXISTS "Admin pode editar imagens cadastradas" ON public.site_imagens;
+CREATE POLICY "Admin pode editar imagens cadastradas"
+ON public.site_imagens FOR UPDATE TO authenticated
+USING ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin')
+WITH CHECK ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin');
+
+DROP POLICY IF EXISTS "Admin pode excluir imagens cadastradas" ON public.site_imagens;
+CREATE POLICY "Admin pode excluir imagens cadastradas"
+ON public.site_imagens FOR DELETE TO authenticated
+USING ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin');
+
+INSERT INTO storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
+VALUES ('imagens-site', 'imagens-site', true, 5242880, ARRAY['image/jpeg','image/png','image/webp'])
+ON CONFLICT (id) DO UPDATE SET
+    public = EXCLUDED.public,
+    file_size_limit = EXCLUDED.file_size_limit,
+    allowed_mime_types = EXCLUDED.allowed_mime_types;
+
+DROP POLICY IF EXISTS "Publico pode visualizar imagens do site" ON storage.objects;
+CREATE POLICY "Publico pode visualizar imagens do site"
+ON storage.objects FOR SELECT TO anon, authenticated
+USING (bucket_id = 'imagens-site');
+
+DROP POLICY IF EXISTS "Admin pode enviar imagens do site" ON storage.objects;
+CREATE POLICY "Admin pode enviar imagens do site"
+ON storage.objects FOR INSERT TO authenticated
+WITH CHECK (
+    bucket_id = 'imagens-site'
+    AND (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin'
+);
+
+DROP POLICY IF EXISTS "Admin pode atualizar imagens do site" ON storage.objects;
+CREATE POLICY "Admin pode atualizar imagens do site"
+ON storage.objects FOR UPDATE TO authenticated
+USING (
+    bucket_id = 'imagens-site'
+    AND (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin'
+)
+WITH CHECK (
+    bucket_id = 'imagens-site'
+    AND (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin'
+);
+
+DROP POLICY IF EXISTS "Admin pode excluir imagens do site" ON storage.objects;
+CREATE POLICY "Admin pode excluir imagens do site"
+ON storage.objects FOR DELETE TO authenticated
+USING (
+    bucket_id = 'imagens-site'
+    AND (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin'
+);
