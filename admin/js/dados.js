@@ -1,42 +1,61 @@
-// Em caso de falha de carregamento
-
+/** Conteúdo padrão de contingência baseado no index.html publicado. */
 export const DEFAULT_DATA = {
-  heroTitle: "Seu inglês pode ir mais longe.",
-  heroDescription:
-    "Conheça a The Top English, sua escola de inglês em Palmas, e encontre uma forma de estudo que combine com sua rotina.",
+  heroTitle: "Inglês com experiência.",
+  heroDescription: "Há mais de duas décadas ensinando inglês, a The Top English oferece aulas para diferentes níveis, idades e objetivos, com acompanhamento próximo da teacher.",
   heroButton: "Quero estudar",
-
-  schoolTitle: "Conheça a The Top English",
-  schoolText1:
-    "A The Top English é uma escola de idiomas voltada ao ensino de inglês. Aqui, o visitante encontra informações sobre a escola, sua metodologia, modalidades de aula e formas de contato.",
-  schoolText2:
-    "O site foi pensado para facilitar o primeiro contato de pessoas interessadas em estudar e deixar as principais informações disponíveis em um único lugar.",
+  schoolTitle: "Uma escola construída ao longo de anos de experiência.",
+  schoolText1: "A The Top English é uma escola de inglês em Palmas que atua desde 1997. Ao longo dessa trajetória, o ensino foi construído com acompanhamento próximo dos alunos e atenção às necessidades de cada turma.",
+  schoolText2: "Aqui, o aluno pode conhecer as opções de cursos, informar seus objetivos e horários e conversar diretamente com a escola para encontrar a alternativa mais adequada.",
   schoolCardTitle: "Inglês para diferentes objetivos",
-  schoolCardText:
-    "Conheça as opções de aulas e converse com a escola para verificar a modalidade e a disponibilidade mais adequada.",
-
-  methodTitle: "Aprender inglês de forma organizada",
-  methodDescription:
-    "Consulte as informações da escola e entre em contato para conhecer melhor a proposta das aulas.",
-  method1Title: "Metodologia",
-  method1Text:
-    "Informações sobre a proposta de ensino e o funcionamento das aulas.",
-  method2Title: "Aulas individuais",
-  method2Text: "Uma opção para quem busca um atendimento mais individualizado.",
-  method3Title: "Aulas em grupo",
-  method3Text:
-    "Turmas organizadas conforme disponibilidade e formação dos grupos.",
-
-  mod1Title: "Individual",
-  mod1Text:
-    "Atendimento individual, com horário definido conforme disponibilidade.",
-  mod2Title: "Em grupo",
-  mod2Text: "Turmas com organização de horários e disponibilidade de vagas.",
-  mod3Title: "Consulte a escola",
-  mod3Text:
-    "Envie seus dados e informe seus horários para verificar as opções disponíveis.",
-
+  schoolCardText: "Conheça as opções de aulas e converse com a escola para verificar a modalidade e a disponibilidade mais adequada.",
+  methodTitle: "Aprender inglês para se comunicar de verdade.",
+  methodDescription: "A The Top English utiliza a metodologia Cambridge Interchange, baseada em uma abordagem comunicativa que prioriza a prática do inglês em situações do mundo real.",
+  method1Title: "Abordagem comunicativa",
+  method1Text: "A prática do inglês é relacionada a situações do mundo real, aproximando o aprendizado do uso cotidiano do idioma.",
+  method2Title: "Fluência e exatidão",
+  method2Text: "O curso busca desenvolver a fluência e a precisão do aluno durante a comunicação em inglês.",
+  method3Title: "Habilidades do idioma",
+  method3Text: "A aprendizagem explora as habilidades necessárias para o desenvolvimento do aluno no domínio de um novo idioma.",
+  mod1Title: "Curso Regular",
+  mod1Text: "Aprenda inglês desde os primeiros passos até níveis avançados, desenvolvendo sua comunicação e confiança para utilizar o idioma no dia a dia.",
+  mod2Title: "Inglês Infantil",
+  mod2Text: "Um primeiro contato com o inglês, estimulando o aprendizado e a familiaridade com o idioma desde a infância.",
+  mod3Title: "Aulas Individuais",
+  mod3Text: "Aulas personalizadas de acordo com seus objetivos, nível de inglês e necessidades, com maior flexibilidade de horários.",
+  mod4Title: "Preparatório para Mestrado",
+  mod4Text: "Aulas direcionadas à prova de inglês exigida no mestrado, com foco em leitura, interpretação e compreensão de textos.",
+  mod5Title: "IELTS e TOEFL",
+  mod5Text: "Preparação para exames internacionais de proficiência em inglês, voltada ao desenvolvimento das habilidades avaliadas nas provas.",
+  mod6Title: "Passages I e II",
+  mod6Text: "Cursos para quem deseja aprofundar seus conhecimentos em inglês e avançar na comunicação em níveis mais elevados.",
+  mod7Title: "Aula de Reforço",
+  mod7Text: "Revise conteúdos, esclareça dúvidas e reforce conhecimentos para acompanhar melhor seus estudos de inglês.",
+  price1Name: 'Infantil',
+  price1Value: '6x de R$ 215,00',
+  price2Name: 'Iniciante A',
+  price2Value: '6x de R$ 215,00',
+  price3Name: 'Iniciante B',
+  price3Value: '6x de R$ 255,00',
+  price4Name: 'Intermediário',
+  price4Value: '6x de R$ 295,00',
+  price5Name: 'Avançado',
+  price5Value: '6x de R$ 335,00',
+  price6Name: 'Passages 1',
+  price6Value: '6x de R$ 365,00',
+  price7Name: 'Passages 2',
+  price7Value: '6x de R$ 395,00',
+  price8Name: 'Individual',
+  price8Value: '6x de R$ 500,00',
+  price9Name: 'TOEFL',
+  price9Value: '6x de R$ 600,00',
+  price10Name: 'IELTS',
+  price10Value: '6x de R$ 600,00',
+  price11Name: 'Aula de reforço',
+  price11Value: 'R$ 65,00',
+  price12Name: 'Preparatório para Mestrado',
+  price12Value: 'Valor negociável conforme as necessidades do aluno.',
+  pricesNote: "Os valores podem variar conforme o curso, formato da aula e disponibilidade de turma.",
   address: "406 Norte, Av. LO 14, Lote 10 — Palmas - TO",
-  phone: "(63) 3215-1652",
-  whatsapp: "(63) 3215-1652",
+  phone: "(63) 98136-9088",
+  whatsapp: "(63) 98136-9088",
 };

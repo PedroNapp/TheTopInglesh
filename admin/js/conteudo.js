@@ -71,6 +71,10 @@ export function descobrirSecao(elemento) {
     return "modalidades";
   }
 
+  if (elemento.startsWith("price") || elemento === "pricesNote") {
+    return "valores";
+  }
+
   if (["address", "phone", "whatsapp"].includes(elemento)) {
     return "contato";
   }

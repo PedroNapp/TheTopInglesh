@@ -197,6 +197,7 @@
             <div class="school-gallery">
               <img
                 id="galleryImage"
+                data-image-slot="escola_galeria"
                 class="galleryImage"
                 src="assets/fotos/sala-de-aula.jpg"
                 alt="Alunos e a teacher Maureen em volta da mesa na sala de aula da The Top English"
@@ -359,7 +360,7 @@
                   desenvolvendo sua comunicação e confiança para utilizar o
                   idioma no dia a dia.
                 </p>
-                <a href="#interesse">Consultar turma →</a>
+                <a href="#interesse" data-servico="regular">Consultar turma →</a>
               </article>
 
               <article class="course-card course-card--infantil">
@@ -368,7 +369,7 @@
                   Um primeiro contato com o inglês, estimulando o aprendizado e
                   a familiaridade com o idioma desde a infância.
                 </p>
-                <a href="#interesse">Consultar turmas →</a>
+                <a href="#interesse" data-servico="infantil">Consultar turmas →</a>
               </article>
 
               <article class="course-card course-card--individual">
@@ -377,7 +378,7 @@
                   Aulas personalizadas de acordo com seus objetivos, nível de
                   inglês e necessidades, com maior flexibilidade de horários.
                 </p>
-                <a href="#interesse">Consultar disponibilidade →</a>
+                <a href="#interesse" data-servico="individual">Consultar disponibilidade →</a>
               </article>
 
               <article class="course-card course-card--mestrado">
@@ -386,7 +387,7 @@
                   Aulas direcionadas à prova de inglês exigida no mestrado, com
                   foco em leitura, interpretação e compreensão de textos.
                 </p>
-                <a href="#interesse">Consultar preparação →</a>
+                <a href="#interesse" data-servico="mestrado">Consultar preparação →</a>
               </article>
 
               <article class="course-card course-card--exames">
@@ -396,7 +397,10 @@
                   inglês, voltada ao desenvolvimento das habilidades avaliadas
                   nas provas.
                 </p>
-                <a href="#interesse">Saber mais →</a>
+                <div class="course-card__links">
+                  <a href="#interesse" data-servico="ielts">IELTS →</a>
+                  <a href="#interesse" data-servico="toefl">TOEFL →</a>
+                </div>
               </article>
 
               <article class="course-card course-card--passages">
@@ -405,7 +409,7 @@
                   Cursos para quem deseja aprofundar seus conhecimentos em
                   inglês e avançar na comunicação em níveis mais elevados.
                 </p>
-                <a href="#interesse">Consultar turma →</a>
+                <a href="#interesse" data-servico="passages">Consultar turma →</a>
               </article>
 
               <article class="course-card course-card--reforco">
@@ -414,7 +418,7 @@
                   Revise conteúdos, esclareça dúvidas e reforce conhecimentos
                   para acompanhar melhor seus estudos de inglês.
                 </p>
-                <a href="#interesse">Consultar aulas →</a>
+                <a href="#interesse" data-servico="reforco">Consultar aulas →</a>
               </article>
             </div>
 
@@ -624,10 +628,11 @@
             data-confirmar="Foto da teacher Maureen na escola, com autorização"
           >
             <img
+              data-image-slot="professora"
               src="assets/fotos/maureen.jpeg"
               alt="Teacher Maureen sorrindo, sentada à mesa na sala da escola"
-              width="1000"
-              height="1241"
+              width="1200"
+              height="1600"
               loading="lazy"
             />
           </figure>
@@ -1219,7 +1224,8 @@
                 <a
                   href="https://wa.me/5563981369088"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
+                  data-whatsapp
                 >
                   Abrir WhatsApp →
                 </a>
@@ -1410,6 +1416,7 @@
     <script src="js/formulario.js"></script>
     <script src="js/extras.js"></script>
 
+    <script type="module" src="./js/admin-integracao.js"></script>
     <script type="module" src="./js/galeriaSobre.js"></script>
   </body>
 </html>

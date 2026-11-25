@@ -4,10 +4,9 @@
   ou ligar a planilha de interessados. Passo a passo no README.md.
 */
 window.SITE_CONFIG = {
-  // WhatsApp da escola (teacher Maureen): só números, com 55 + DDD + número.
-  // Se mudar, atualize também o número escrito em privacidade.html.
-  // Este número é usado só pelo formulário "Quero estudar". O card de WhatsApp da seção Contato
-  // continua vindo do painel admin (Supabase).
+  // Número de contingência do WhatsApp da escola: 55 + DDD + número.
+  // Depois que o conteúdo do Supabase carregar, o painel de Contato substitui este valor
+  // e atualiza todos os botões, links e formulários do WhatsApp do site.
   whatsapp: '5563981369088',
 
   // Mensagem do botão flutuante "WhatsApp". O "Vim pelo site" mostra à escola de onde veio o contato.

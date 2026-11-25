@@ -17,6 +17,7 @@ import {
 } from "./interface.js";
 
 import { configurarNavegacao } from "./eventos.js";
+import { configurarGerenciadorImagens } from "./imagens.js";
 
 const loginView = document.getElementById("loginView");
 const adminView = document.getElementById("adminView");
@@ -44,6 +45,7 @@ async function iniciarPainel() {
   const data = await carregarConteudo();
 
   preencherCampos(data);
+  configurarGerenciadorImagens();
 }
 
 loginForm.addEventListener("submit", async (event) => {

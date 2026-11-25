@@ -89,7 +89,22 @@
           </div>
         </div>
 
-        <nav>
+        <button
+          id="adminMobileMenuToggle"
+          class="admin-mobile-menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="adminMobileNav"
+          aria-label="Abrir opções de seção"
+        >
+          <span class="admin-mobile-menu-label-wrap">
+            <small>Seção atual</small>
+            <strong class="admin-menu-current-label">Página inicial</strong>
+          </span>
+          <span class="admin-mobile-menu-icon" aria-hidden="true">☰</span>
+        </button>
+
+        <nav id="adminMobileNav" aria-label="Seções do painel">
           <button
             class="side-link active"
             data-section="inicio"
@@ -120,9 +135,23 @@
 
           <button
             class="side-link"
+            data-section="valores"
+          >
+            💰 Valores
+          </button>
+
+          <button
+            class="side-link"
             data-section="contato"
           >
             📱 Contato
+          </button>
+
+          <button
+            class="side-link"
+            data-section="imagens"
+          >
+            🖼️ Imagens
           </button>
         </nav>
 
@@ -147,21 +176,18 @@
       <!-- DASHBOARD -->
       <main class="dashboard">
         <header class="dashboard-header">
-          <div>
-            <span class="section-label"> PAINEL ADMINISTRATIVO </span>
-
+          <div class="dashboard-heading">
             <h1>Gerenciar conteúdo</h1>
-
-            <p>
-              Altere as informações e salve para atualizar o conteúdo do site.
-            </p>
+            <p>Altere as informações do site e salve suas atualizações.</p>
           </div>
 
           <span
             id="saveStatus"
             class="save-status"
+            role="status"
+            aria-live="polite"
           >
-            Tudo salvo
+            ✓ Tudo salvo
           </span>
         </header>
 
@@ -436,12 +462,282 @@
               </div>
             </div>
 
+
+            <div class="edit-item">
+              <span>04</span>
+
+              <div>
+                <label for="mod4Title"> Nome </label>
+
+                <input id="mod4Title" type="text" />
+
+                <label for="mod4Text"> Descrição </label>
+
+                <textarea id="mod4Text" rows="2"></textarea>
+              </div>
+            </div>
+
+            <div class="edit-item">
+              <span>05</span>
+
+              <div>
+                <label for="mod5Title"> Nome </label>
+
+                <input id="mod5Title" type="text" />
+
+                <label for="mod5Text"> Descrição </label>
+
+                <textarea id="mod5Text" rows="2"></textarea>
+              </div>
+            </div>
+
+            <div class="edit-item">
+              <span>06</span>
+
+              <div>
+                <label for="mod6Title"> Nome </label>
+
+                <input id="mod6Title" type="text" />
+
+                <label for="mod6Text"> Descrição </label>
+
+                <textarea id="mod6Text" rows="2"></textarea>
+              </div>
+            </div>
+
+            <div class="edit-item">
+              <span>07</span>
+
+              <div>
+                <label for="mod7Title"> Nome </label>
+
+                <input id="mod7Title" type="text" />
+
+                <label for="mod7Text"> Descrição </label>
+
+                <textarea id="mod7Text" rows="2"></textarea>
+              </div>
+            </div>
+
             <button
               class="btn btn-primary save-section"
               data-section="modalidades"
             >
               Salvar modalidades
             </button>
+          </div>
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- IMAGENS -->
+        <!-- ========================= -->
+        <section id="section-imagens" class="admin-section">
+          <div class="section-title">
+            <h2>Imagens do site</h2>
+            <p>Troque a foto da professora e gerencie as fotos da galeria em formato de carrossel.</p>
+          </div>
+
+          <div class="form-card image-manager">
+            <div class="image-manager-item">
+              <div>
+                <h3>Foto da professora</h3>
+                <p class="muted">A foto atual será substituída quando você enviar outra.</p>
+              </div>
+              <img id="preview-professora" class="image-preview" src="../assets/fotos/maureen.jpeg" alt="Prévia da foto da professora" />
+              <label for="file-professora">Escolher foto</label>
+              <input id="file-professora" type="file" accept="image/jpeg,image/png,image/webp" />
+              <button class="btn btn-primary upload-image" data-key="professora" data-label="Foto da professora" data-alt="Teacher Maureen, professora da The Top English" type="button">Salvar foto da professora</button>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="gallery-admin-heading gallery-main-heading">
+              <div>
+                <h3>Galeria de fotos da escola</h3>
+                <p class="muted">Adicione novas fotos ao carrossel e organize a sequência em que aparecem no site.</p>
+                <p class="gallery-move-legend"><span class="legend-dot" aria-hidden="true"></span> Verde: pode mover <span class="legend-dot is-disabled" aria-hidden="true"></span> Cinza: movimento indisponível nessa direção</p>
+              </div>
+              <div class="gallery-heading-actions">
+                <button id="refreshGalleryBtn" class="btn btn-secondary" type="button">Atualizar</button>
+                <button id="openGalleryDialogBtn" class="btn btn-primary" type="button" aria-haspopup="dialog" aria-controls="galleryAddDialog">＋ Adicionar foto</button>
+              </div>
+            </div>
+
+            <div id="galleryAdminList" class="gallery-admin-list"></div>
+
+            <dialog id="galleryAddDialog" class="gallery-dialog" aria-labelledby="galleryDialogTitle">
+              <div class="gallery-dialog-panel">
+                <div class="gallery-dialog-header">
+                  <div>
+                    <span class="gallery-dialog-eyebrow">NOVA FOTO</span>
+                    <h3 id="galleryDialogTitle">Adicionar à galeria</h3>
+                    <p>Preencha as informações abaixo. A foto será colocada no final do carrossel.</p>
+                  </div>
+                  <button id="closeGalleryDialogBtn" class="gallery-dialog-close" type="button" aria-label="Fechar">×</button>
+                </div>
+
+                <div class="gallery-dialog-body">
+                  <label class="gallery-file-picker" for="galleryFiles">
+                    <span class="gallery-file-icon" aria-hidden="true">＋</span>
+                    <span><strong>Escolher foto</strong><small>JPG, PNG ou WebP · até 5 MB</small></span>
+                    <span class="gallery-file-action">Procurar</span>
+                  </label>
+                  <input id="galleryFiles" class="visually-hidden-file" type="file" accept="image/jpeg,image/png,image/webp" />
+                  <p id="gallerySelectedFileName" class="gallery-selected-file" aria-live="polite">Nenhuma foto selecionada</p>
+
+                  <div id="galleryPreviewWrap" class="gallery-preview-wrap" hidden>
+                    <img id="galleryUploadPreview" class="gallery-upload-preview" alt="Prévia da foto selecionada" />
+                  </div>
+
+                  <div class="gallery-dialog-fields">
+                    <div>
+                      <label for="galleryImageTitle">Nome da imagem</label>
+                      <input id="galleryImageTitle" type="text" maxlength="100" placeholder="Ex.: Sala de aula" required />
+                    </div>
+                    <div>
+                      <label for="galleryImageDescription">Descrição da imagem</label>
+                      <textarea id="galleryImageDescription" rows="3" maxlength="300" placeholder="Descreva brevemente o que aparece na foto." required></textarea>
+                      <small>A descrição será exibida junto à foto no carrossel.</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="gallery-dialog-footer">
+                  <button id="cancelGalleryDialogBtn" class="btn btn-secondary" type="button">Cancelar</button>
+                  <button id="addGalleryImagesBtn" class="btn btn-primary" type="button">Adicionar foto</button>
+                </div>
+              </div>
+            </dialog>
+
+            <p id="imageStatus" class="image-status" role="status" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <!-- VALORES -->
+        <section id="section-valores" class="admin-section">
+          <div class="section-title">
+            <h2>Valores</h2>
+            <p>Edite os valores apresentados na lista de investimento do site.</p>
+          </div>
+          <div class="form-card">
+            <div class="edit-item">
+              <span>01</span>
+              <div>
+                <label for="price1Name">Curso / modalidade</label>
+                <input id="price1Name" type="text" />
+                <label for="price1Value">Valor / condição</label>
+                <input id="price1Value" type="text" />
+              </div>
+            </div>
+            <div class="edit-item">
+              <span>02</span>
+              <div>
+                <label for="price2Name">Curso / modalidade</label>
+                <input id="price2Name" type="text" />
+                <label for="price2Value">Valor / condição</label>
+                <input id="price2Value" type="text" />
+              </div>
+            </div>
+            <div class="edit-item">
+              <span>03</span>
+              <div>
+                <label for="price3Name">Curso / modalidade</label>
+                <input id="price3Name" type="text" />
+                <label for="price3Value">Valor / condição</label>
+                <input id="price3Value" type="text" />
+              </div>
+            </div>
+            <div class="edit-item">
+              <span>04</span>
+              <div>
+                <label for="price4Name">Curso / modalidade</label>
+                <input id="price4Name" type="text" />
+                <label for="price4Value">Valor / condição</label>
+                <input id="price4Value" type="text" />
+              </div>
+            </div>
+            <div class="edit-item">
+              <span>05</span>
+              <div>
+                <label for="price5Name">Curso / modalidade</label>
+                <input id="price5Name" type="text" />
+                <label for="price5Value">Valor / condição</label>
+                <input id="price5Value" type="text" />
+              </div>
+            </div>
+            <div class="edit-item">
+              <span>06</span>
+              <div>
+                <label for="price6Name">Curso / modalidade</label>
+                <input id="price6Name" type="text" />
+                <label for="price6Value">Valor / condição</label>
+                <input id="price6Value" type="text" />
+              </div>
+            </div>
+            <div class="edit-item">
+              <span>07</span>
+              <div>
+                <label for="price7Name">Curso / modalidade</label>
+                <input id="price7Name" type="text" />
+                <label for="price7Value">Valor / condição</label>
+                <input id="price7Value" type="text" />
+              </div>
+            </div>
+            <div class="edit-item">
+              <span>08</span>
+              <div>
+                <label for="price8Name">Curso / modalidade</label>
+                <input id="price8Name" type="text" />
+                <label for="price8Value">Valor / condição</label>
+                <input id="price8Value" type="text" />
+              </div>
+            </div>
+            <div class="edit-item">
+              <span>09</span>
+              <div>
+                <label for="price9Name">Curso / modalidade</label>
+                <input id="price9Name" type="text" />
+                <label for="price9Value">Valor / condição</label>
+                <input id="price9Value" type="text" />
+              </div>
+            </div>
+            <div class="edit-item">
+              <span>10</span>
+              <div>
+                <label for="price10Name">Curso / modalidade</label>
+                <input id="price10Name" type="text" />
+                <label for="price10Value">Valor / condição</label>
+                <input id="price10Value" type="text" />
+              </div>
+            </div>
+            <div class="edit-item">
+              <span>11</span>
+              <div>
+                <label for="price11Name">Curso / modalidade</label>
+                <input id="price11Name" type="text" />
+                <label for="price11Value">Valor / condição</label>
+                <input id="price11Value" type="text" />
+              </div>
+            </div>
+            <div class="edit-item">
+              <span>12</span>
+              <div>
+                <label for="price12Name">Curso / modalidade</label>
+                <input id="price12Name" type="text" />
+                <label for="price12Value">Valor / condição</label>
+                <textarea
+                  id="price12Value"
+                  rows="2"
+                  aria-describedby="price12Help"
+                  placeholder="Ex.: Valor negociável conforme as necessidades do aluno."
+                ></textarea>
+                <small id="price12Help" class="field-help">Este campo aceita textos maiores e ajusta a quebra de linha automaticamente.</small>
+              </div>
+            </div>
+            <label for="pricesNote">Observação sobre os valores</label>
+            <textarea id="pricesNote" rows="2"></textarea>
+            <button class="btn btn-primary save-section" data-section="valores">Salvar valores</button>
           </div>
         </section>
 
@@ -477,8 +773,11 @@
 
             <input
               id="whatsapp"
-              type="text"
+              type="tel"
+              inputmode="tel"
+              placeholder="(63) 98136-9088"
             />
+            <small class="field-help">Este número será usado por todos os botões, links e formulários do WhatsApp no site.</small>
 
             <button
               class="btn btn-primary save-section"
