@@ -25,7 +25,7 @@ whatsapp: '5563981369088',
 ```
 
 2. `index.html`, seção `Onde estamos`: o número escrito e o link `https://wa.me/55…`.
-3. `index.html`, linha `"telephone"` nos dados para o Google (perto do topo do arquivo).
+3. `index.html`, bloco `<script type="application/ld+json">` dentro do `<head>` (perto do topo do arquivo): campo `"telephone"`. Se o endereço mudar, troque também `streetAddress` e `geo`.
 4. `privacidade.html`, seção “Seus direitos”.
 
 ## Atualizar o aviso do topo
